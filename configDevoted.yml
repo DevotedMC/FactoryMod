@@ -1,0 +1,1356 @@
+# 
+#   inputmat1:
+#       material: STONE
+#   inputmat345FF:
+#       material: DIRT
+
+default_fuel:
+  magic:
+    material: EXP_BOTTLE
+    amount: 1
+default_fuel_consumption_intervall: 2s
+default_menu_factory: Workshop
+default_return_rate: 0.5
+break_grace_period: 100d
+decay_intervall: 1h
+decay_amount: 0
+disable_nether: false
+default_update_time: 1s
+use_recipe_yamlidentifiers: false
+log_inventories: true
+factories:
+  workshop:
+    type: FCC
+    name: Workshop
+    setupcost:
+      spick:
+        material: WOOD_PICKAXE
+        amount: 1
+      shovel:
+        material: WOOD_SPADE
+        amount: 1
+      shoe:
+        material: WOOD_HOE
+        amount: 1
+      saxe:
+        material: WOOD_AXE
+        amount: 1
+    recipes:
+    - Upgrade to Equipment factory
+    - Upgrade to Military factory
+    - Upgrade to Mining factory
+    - Upgrade to Alchemy factory
+    - Accident Repair
+  equipmentFactory:
+    type: FCCUPGRADE
+    name: Equipment factory
+    recipes:
+    - Craft U4E6 Pickaxe
+    - Craft U4E6 Shovel
+    - Craft U4E6 Axe
+    - Craft U4 Bow
+    - Craft U4 Helmet
+    - Craft U4 Chestplate
+    - Craft U4 Leggings
+    - Craft U4 Boots
+    - Craft U5E7 Pickaxe
+    - Craft U5E7 Shovel
+    - Craft U5E7 Axe
+    - Craft U5 Bow
+    - Craft U5 Helmet
+    - Craft U5 Chestplate
+    - Craft U5 Leggings
+    - Craft U5 Boots
+    - Craft U6E8 Pickaxe
+    - Craft U6E8 Shovel
+    - Craft U6E8 Axe
+    - Craft U6 Bow
+    - Craft U6 Helmet
+    - Craft U6 Chestplate
+    - Craft U6 Leggings
+    - Craft U6 Boots
+    - Craft U7E9 Pickaxe
+    - Craft U7E9 Shovel
+    - Craft U7E9 Axe
+    - Craft U7 Bow
+    - Craft U7 Helmet
+    - Craft U7 Chestplate
+    - Craft U7 Leggings
+    - Craft U7 Boots
+    - Accident Repair
+  militaryFac:
+    type: FCCUPGRADE
+    name: Military factory
+    recipes:
+    - Forge a Town bastion
+    - Forge a Vault bastion
+    - Forge an Assault bastion
+    - Convert Snitch
+    - Accident Repair
+  miningFac:
+    type: FCCUPGRADE
+    name: Mining factory
+    recipes:
+    - Sift Diamonds
+    - Sift Diamonds Bulk
+    - Extract Gems
+    - Extract Gems Bulk
+    - Smelt Iron
+    - Smelt Iron Bulk
+    - Crush Coal
+    - Crush Coal Bulk
+    - Refine Lapis
+    - Refine Lapis Bulk
+    - Accident Repair
+  alchemyFac:
+    type: FCCUPGRADE
+    name: Alchemy factory
+    recipes:
+    - Brew Haste Potion
+    - Speed III
+    - Regen 4m
+    - Invisibility II
+    - Brewery Lottery
+    - Accident Repair
+  balanceFac:
+    type: FCCUPGRADE
+    name: Balance Factory
+    recipes:
+    - Magma Blocks
+    - Nether Wart Blocks
+    - Accident Repair
+  productionFac:
+    type: FCCUPGRADE
+    name: Production factory
+    recipes:
+    - Smelt Stone
+    - Accident Repair
+  materialSynth:
+    type: FCCUPGRADE
+    name: Material Synthesizer
+    recipes:
+    - Mix Concrete
+    - Steel Reinforcement
+    - E6 Redstone
+    - E7 Redstone
+    - E8 Redstone
+    - E9 Redstone
+    - E6 Iron
+    - E7 Iron
+    - E8 Iron
+    - E9 Iron
+    - E6 Emerald
+    - E7 Emerald
+    - E8 Emerald
+    - E9 Emerald
+    - E6 Diamond
+    - E7 Diamond
+    - E8 Diamond
+    - E9 Diamond
+    - Accident Repair
+  lotteryFac:
+    type: FCCUPGRADE
+    name: Lottery Machine
+    recipes:
+    - Stone Lottery
+    - Redstone Block Lottery
+    - Iron Lottery
+    - Emerald Lottery
+    - Diamond Lottery
+    - Diamond Block Lottery
+    - Accident Repair
+recipes:
+  repair:
+    name: Accident Repair
+    production_time: 1s
+    type: REPAIR
+    input:
+      xp_bottles:
+        material: EXP_BOTTLE
+        amount: 10
+    health_gained: 10000
+  mixConcrete:
+    type: PRODUCTION
+    name: Mix Concrete
+    production_time: 10s
+    input:
+      stone:
+        material: STONE
+        durability: -1
+        amount: 64
+      gravel:
+        material: GRAVEL
+        amount: 64
+      sand:
+        material: SAND
+        amount: 64
+    output:
+      concrete:
+        material: GRAVEL
+        amount: 64
+        lore:
+        - Reinforce then let it set!
+  u4e6pick:
+    name: Craft U4E6 Pickaxe
+    production_time: 10s
+    type: PRODUCTION
+    input:
+      tool:
+        material: DIAMOND_PICKAXE
+        amount: 2
+        enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 3
+          efficiency:
+            enchant: DIG_SPEED
+            level: 5
+    output:
+      tool:
+        material: DIAMOND_PICKAXE
+        amount: 1
+        enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 4
+          efficiency:
+            enchant: DIG_SPEED
+            level: 6
+  u4e6shovel:
+    name: Craft U4E6 Shovel
+    production_time: 10s
+    type: PRODUCTION
+    input:
+      tool:
+        material: DIAMOND_SPADE
+        amount: 2
+        enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 3
+          efficiency:
+            enchant: DIG_SPEED
+            level: 5
+    output:
+      tool:
+        material: DIAMOND_SPADE
+        amount: 1
+        enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 4
+          efficiency:
+            enchant: DIG_SPEED
+            level: 6
+  u4e6axe:
+    name: Craft U4E6 Axe
+    production_time: 10s
+    type: PRODUCTION
+    input:
+      tool:
+        material: DIAMOND_AXE
+        amount: 2
+        enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 3
+          efficiency:
+            enchant: DIG_SPEED
+            level: 5
+    output:
+      tool:
+        material: DIAMOND_AXE
+        amount: 1
+        enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 4
+          efficiency:
+            enchant: DIG_SPEED
+            level: 6
+  u4bow:
+    name: Craft U4 Bow
+    production_time: 10s
+    type: PRODUCTION
+    input:
+      tool:
+        material: BOW
+        amount: 2
+        enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 3
+    output:
+      tool:
+        material: BOW
+        amount: 1
+        enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 4
+  u4helm:
+    name: Craft U4 Helmet
+    production_time: 10s
+    type: PRODUCTION
+    input:
+      tool:
+        material: DIAMOND_HELMET
+        amount: 2
+        enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 3
+    output:
+      tool:
+        material: DIAMOND_HELMET
+        amount: 1
+        enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 4
+  u4chestplate:
+    name: Craft U4 Chestplate
+    production_time: 10s
+    type: PRODUCTION
+    input:
+      tool:
+        material: DIAMOND_CHESTPLATE
+        amount: 2
+        enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 3
+    output:
+      tool:
+        material: DIAMOND_CHESTPLATE
+        amount: 1
+        enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 4
+  u4legs:
+    name: Craft U4 Leggings
+    production_time: 10s
+    type: PRODUCTION
+    input:
+      tool:
+        material: DIAMOND_LEGGINGS
+        amount: 2
+        enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 3
+    output:
+      tool:
+        material: DIAMOND_LEGGINGS
+        amount: 1
+        enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 4
+  u4boots:
+    name: Craft U4 Boots
+    production_time: 10s
+    type: PRODUCTION
+    input:
+      tool:
+        material: DIAMOND_BOOTS
+        amount: 2
+        enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 3
+    output:
+      tool:
+        material: DIAMOND_BOOTS
+        amount: 1
+        enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 4
+  u5e7pick:
+    name: Craft U5E7 Pickaxe
+    production_time: 10s
+    type: PRODUCTION
+    input:
+      tool:
+        material: DIAMOND_PICKAXE
+        amount: 2
+        enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 4
+          efficiency:
+            enchant: DIG_SPEED
+            level: 6
+    output:
+      tool:
+        material: DIAMOND_PICKAXE
+        amount: 1
+        enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 5
+          efficiency:
+            enchant: DIG_SPEED
+            level: 7
+  u5e7shovel:
+    name: Craft U5E7 Shovel
+    production_time: 10s
+    type: PRODUCTION
+    input:
+      tool:
+        material: DIAMOND_SPADE
+        amount: 2
+        enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 4
+          efficiency:
+            enchant: DIG_SPEED
+            level: 6
+    output:
+      tool:
+        material: DIAMOND_SPADE
+        amount: 1
+        enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 5
+          efficiency:
+            enchant: DIG_SPEED
+            level: 7
+  u5e7axe:
+    name: Craft U5E7 Axe
+    production_time: 10s
+    type: PRODUCTION
+    input:
+      tool:
+        material: DIAMOND_AXE
+        amount: 2
+        enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 4
+          efficiency:
+            enchant: DIG_SPEED
+            level: 6
+    output:
+      tool:
+        material: DIAMOND_AXE
+        amount: 1
+        enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 5
+          efficiency:
+            enchant: DIG_SPEED
+            level: 7
+  u5bow:
+    name: Craft U5 Bow
+    production_time: 10s
+    type: PRODUCTION
+    input:
+      tool:
+        material: BOW
+        amount: 2
+        enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 4
+    output:
+      tool:
+        material: BOW
+        amount: 1
+        enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 5
+  u5helm:
+    name: Craft U5 Helmet
+    production_time: 10s
+    type: PRODUCTION
+    input:
+      tool:
+        material: DIAMOND_HELMET
+        amount: 2
+        enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 4
+    output:
+      tool:
+        material: DIAMOND_HELMET
+        amount: 1
+        enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 5
+  u5chestplate:
+    name: Craft U5 Chestplate
+    production_time: 10s
+    type: PRODUCTION
+    input:
+      tool:
+        material: DIAMOND_CHESTPLATE
+        amount: 2
+        enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 4
+    output:
+      tool:
+        material: DIAMOND_CHESTPLATE
+        amount: 1
+        enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 5
+  u5legs:
+    name: Craft U5 Leggings
+    production_time: 10s
+    type: PRODUCTION
+    input:
+      tool:
+        material: DIAMOND_LEGGINGS
+        amount: 2
+        enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 4
+    output:
+      tool:
+        material: DIAMOND_LEGGINGS
+        amount: 1
+        enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 5
+  u5boots:
+    name: Craft U5 Boots
+    production_time: 10s
+    type: PRODUCTION
+    input:
+      tool:
+        material: DIAMOND_BOOTS
+        amount: 2
+        enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 4
+    output:
+      tool:
+        material: DIAMOND_BOOTS
+        amount: 1
+        enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 5
+  u6e8pick:
+    name: Craft U6E8 Pickaxe
+    production_time: 10s
+    type: PRODUCTION
+    input:
+      tool:
+        material: DIAMOND_PICKAXE
+        amount: 2
+        enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 5
+          efficiency:
+            enchant: DIG_SPEED
+            level: 7
+    output:
+      tool:
+        material: DIAMOND_PICKAXE
+        amount: 1
+        enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 6
+          efficiency:
+            enchant: DIG_SPEED
+            level: 8
+  u6e8shovel:
+    name: Craft U6E8 Shovel
+    production_time: 10s
+    type: PRODUCTION
+    input:
+      tool:
+        material: DIAMOND_SPADE
+        amount: 2
+        enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 5
+          efficiency:
+            enchant: DIG_SPEED
+            level: 7
+    output:
+      tool:
+        material: DIAMOND_SPADE
+        amount: 1
+        enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 6
+          efficiency:
+            enchant: DIG_SPEED
+            level: 8
+  u6e8axe:
+    name: Craft U6E8 Axe
+    production_time: 10s
+    type: PRODUCTION
+    input:
+      tool:
+        material: DIAMOND_AXE
+        amount: 2
+        enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 5
+          efficiency:
+            enchant: DIG_SPEED
+            level: 7
+    output:
+      tool:
+        material: DIAMOND_AXE
+        amount: 1
+        enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 6
+          efficiency:
+            enchant: DIG_SPEED
+            level: 8
+  u6bow:
+    name: Craft U6 Bow
+    production_time: 10s
+    type: PRODUCTION
+    input:
+      tool:
+        material: BOW
+        amount: 2
+        enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 5
+    output:
+      tool:
+        material: BOW
+        amount: 1
+        enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 6
+  u6helm:
+    name: Craft U6 Helmet
+    production_time: 10s
+    type: PRODUCTION
+    input:
+      tool:
+        material: DIAMOND_HELMET
+        amount: 2
+        enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 5
+    output:
+      tool:
+        material: DIAMOND_HELMET
+        amount: 1
+        enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 6
+  u6chestplate:
+    name: Craft U6 Chestplate
+    production_time: 10s
+    type: PRODUCTION
+    input:
+      tool:
+        material: DIAMOND_CHESTPLATE
+        amount: 2
+        enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 5
+    output:
+      tool:
+        material: DIAMOND_CHESTPLATE
+        amount: 1
+        enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 6
+  u6legs:
+    name: Craft U6 Leggings
+    production_time: 10s
+    type: PRODUCTION
+    input:
+      tool:
+        material: DIAMOND_LEGGINGS
+        amount: 2
+        enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 5
+    output:
+      tool:
+        material: DIAMOND_LEGGINGS
+        amount: 1
+        enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 6
+  u6boots:
+    name: Craft U6 Boots
+    production_time: 10s
+    type: PRODUCTION
+    input:
+      tool:
+        material: DIAMOND_BOOTS
+        amount: 2
+        enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 5
+    output:
+      tool:
+        material: DIAMOND_BOOTS
+        amount: 1
+        enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 6
+  u7e9pick:
+    name: Craft U7E9 Pickaxe
+    production_time: 10s
+    type: PRODUCTION
+    input:
+      tool:
+        material: DIAMOND_PICKAXE
+        amount: 2
+        enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 6
+          efficiency:
+            enchant: DIG_SPEED
+            level: 8
+    output:
+      tool:
+        material: DIAMOND_PICKAXE
+        amount: 1
+        enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 7
+          efficiency:
+            enchant: DIG_SPEED
+            level: 9
+  u7e9shovel:
+    name: Craft U7E9 Shovel
+    production_time: 10s
+    type: PRODUCTION
+    input:
+      tool:
+        material: DIAMOND_SPADE
+        amount: 2
+        enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 6
+          efficiency:
+            enchant: DIG_SPEED
+            level: 8
+    output:
+      tool:
+        material: DIAMOND_SPADE
+        amount: 1
+        enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 7
+          efficiency:
+            enchant: DIG_SPEED
+            level: 9
+  u7e9axe:
+    name: Craft U7E9 Axe
+    production_time: 10s
+    type: PRODUCTION
+    input:
+      tool:
+        material: DIAMOND_AXE
+        amount: 2
+        enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 6
+          efficiency:
+            enchant: DIG_SPEED
+            level: 8
+    output:
+      tool:
+        material: DIAMOND_AXE
+        amount: 1
+        enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 7
+          efficiency:
+            enchant: DIG_SPEED
+            level: 9
+  u7bow:
+    name: Craft U7 Bow
+    production_time: 10s
+    type: PRODUCTION
+    input:
+      tool:
+        material: BOW
+        amount: 2
+        enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 6
+    output:
+      tool:
+        material: BOW
+        amount: 1
+        enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 7
+  u7helm:
+    name: Craft U7 Helmet
+    production_time: 10s
+    type: PRODUCTION
+    input:
+      tool:
+        material: DIAMOND_HELMET
+        amount: 2
+        enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 6
+    output:
+      tool:
+        material: DIAMOND_HELMET
+        amount: 1
+        enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 7
+  u7chestplate:
+    name: Craft U7 Chestplate
+    production_time: 10s
+    type: PRODUCTION
+    input:
+      tool:
+        material: DIAMOND_CHESTPLATE
+        amount: 2
+        enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 6
+    output:
+      tool:
+        material: DIAMOND_CHESTPLATE
+        amount: 1
+        enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 7
+  u7legs:
+    name: Craft U7 Leggings
+    production_time: 10s
+    type: PRODUCTION
+    input:
+      tool:
+        material: DIAMOND_LEGGINGS
+        amount: 2
+        enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 6
+    output:
+      tool:
+        material: DIAMOND_LEGGINGS
+        amount: 1
+        enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 7
+  u7boots:
+    name: Craft U7 Boots
+    production_time: 10s
+    type: PRODUCTION
+    input:
+      tool:
+        material: DIAMOND_BOOTS
+        amount: 2
+        enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 6
+    output:
+      tool:
+        material: DIAMOND_BOOTS
+        amount: 1
+        enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 7
+  townBastion:
+    name: Forge a Town bastion
+    production_time: 10s
+    type: PRODUCTION
+    input:
+      saddle:
+        material: SADDLE
+        amount: 1
+      enderpearl:
+        material: ENDER_PEARL
+        amount: 1
+      chickenspawnegg:
+        material: MONSTER_EGG
+        amount: 1
+      obsidian:
+        material: OBSIDIAN
+        amount: 1
+      melonblock:
+        material: MELON_BLOCK
+        amount: 1
+      ironblock:
+        material: IRON_BLOCK
+        amount: 1
+      diablock:
+        material: DIAMOND_BLOCK
+        amount: 2
+      goldblock:
+        material: GOLD_BLOCK
+        amount: 1
+    output:
+      townBastion:
+        material: SPONGE
+        amount: 9
+        name: Town Bastion
+        lore:
+        - Prevents block placement within 19x19 area
+        - Prevents ender pearls being thrown
+  vaultBastion:
+    name: Forge a Vault bastion
+    production_time: 10s
+    type: PRODUCTION
+    input:
+      saddle:
+        material: SADDLE
+        amount: 1
+      enderpearl:
+        material: ENDER_PEARL
+        amount: 1
+      chickenspawnegg:
+        material: MONSTER_EGG
+        amount: 1
+      obsidian:
+        material: OBSIDIAN
+        amount: 1
+      melonblock:
+        material: MELON_BLOCK
+        amount: 1
+      ironblock:
+        material: IRON_BLOCK
+        amount: 1
+      diablock:
+        material: DIAMOND_BLOCK
+        amount: 2
+      goldblock:
+        material: GOLD_BLOCK
+        amount: 1
+    output:
+      vaultBastion:
+        material: SPONGE
+        amount: 9
+        name: Vault Bastion
+        lore:
+        - Prevents block placement in 9 radius circle
+        - Prevents Ender pearls being thrown
+  aoeBastion:
+    name: Forge an Assault bastion
+    production_time: 10s
+    type: PRODUCTION
+    input:
+      saddle:
+        material: SADDLE
+        amount: 1
+      enderpearl:
+        material: ENDER_PEARL
+        amount: 1
+      chickenspawnegg:
+        material: MONSTER_EGG
+        amount: 1
+      obsidian:
+        material: OBSIDIAN
+        amount: 1
+      melonblock:
+        material: MELON_BLOCK
+        amount: 1
+      ironblock:
+        material: IRON_BLOCK
+        amount: 1
+      diablock:
+        material: DIAMOND_BLOCK
+        amount: 2
+      goldblock:
+        material: GOLD_BLOCK
+        amount: 1
+    output:
+      aoeBastion:
+        material: SPONGE
+        amount: 9
+        name: Assault Bastion
+        lore:
+        - Large circular area of effect
+  siftdiamonds:
+    name: Sift Diamonds
+    production_time: 10s
+    type: PRODUCTION
+    input:
+      diaore:
+        material: DIAMOND_ORE
+        amount: 2
+    output:
+      diamond:
+        material: DIAMOND
+        amount: 5
+  siftdiamondsbulk:
+    name: Sift Diamonds Bulk
+    production_time: 10s
+    type: PRODUCTION
+    input:
+      diaore:
+        material: DIAMOND_ORE
+        amount: 64
+    output:
+      diamond:
+        material: DIAMOND
+        amount: 176
+  extractemeralds:
+    name: Extract Gems
+    production_time: 10s
+    type: PRODUCTION
+    input:
+      emeraldore:
+        material: EMERALD_ORE
+        amount: 2
+    output:
+      emeralds:
+        material: EMERALD
+        amount: 5
+  extractemeraldsbulk:
+    name: Extract Gems Bulk
+    production_time: 10s
+    type: PRODUCTION
+    input:
+      emeraldore:
+        material: EMERALD_ORE
+        amount: 64
+    output:
+      emeralds:
+        material: EMERALD
+        amount: 176
+  smeltiron:
+    name: Smelt Iron
+    production_time: 10s
+    type: PRODUCTION
+    input:
+      ironore:
+        material: IRON_ORE
+        amount: 3
+    output:
+      iron:
+        material: IRON_INGOT
+        amount: 4
+  smeltironbulk:
+    name: Smelt Iron Bulk
+    production_time: 10s
+    type: PRODUCTION
+    input:
+      ironore:
+        material: IRON_ORE
+        amount: 64
+    output:
+      iron:
+        material: IRON_INGOT
+        amount: 96
+  crushcoal:
+    name: Crush Coal
+    production_time: 10s
+    type: PRODUCTION
+    input:
+      coalore:
+        material: COAL_ORE
+        amount: 2
+    output:
+      coal:
+        material: COAL
+        amount: 5
+  crushcoalbulk:
+    name: Crush Coal Bulk
+    production_time: 10s
+    type: PRODUCTION
+    input:
+      coalore:
+        material: COAL_ORE
+        amount: 64
+    output:
+      coal:
+        material: COAL
+        amount: 176
+  lapis:
+    name: Refine Lapis
+    production_time: 10s
+    type: PRODUCTION
+    input:
+      lapisore:
+        material: LAPIS_ORE
+        amount: 1
+    output:
+      lapis:
+        material: INK_SACK
+        durability: 4
+        amount: 20
+  lapisbulk:
+    name: Refine Lapis Bulk
+    production_time: 10s
+    type: PRODUCTION
+    input:
+      lapisore:
+        material: LAPIS_ORE
+        amount: 64
+    output:
+      lapis:
+        material: INK_SACK
+        durability: 4
+        amount: 1440
+  haste8m:
+    name: Brew Haste Potion
+    production_time: 10s
+    type: PRODUCTION
+    input:
+      diapick:
+        material: DIAMOND_PICKAXE
+        amount: 1
+      sugar:
+        material: SUGAR
+        amount: 1
+      glowstone:
+        material: GLOWSTONE_DUST
+        amount: 1
+    output:
+      haste:
+        material: POTION
+        potion_effects:
+          type: SPEED
+          upgraded: false
+          extended: true
+  EquipmentFac:
+    name: Upgrade to Equipment factory
+    production_time: 10s
+    type: UPGRADE
+    input:
+      diaSword:
+        material: DIAMOND_SWORD
+        amount: 1
+      diaPick:
+        material: DIAMOND_PICKAXE
+        amount: 1
+      diaShovel:
+        material: DIAMOND_SPADE
+        amount: 1
+      diaAxe:
+        material: DIAMOND_AXE
+        amount: 1
+      ironblock:
+        material: IRON_BLOCK
+        amount: 8
+    factory: Equipment factory
+  MilitaryFac:
+    name: Upgrade to Military factory
+    production_time: 10s
+    type: UPGRADE
+    input:
+      diaSword:
+        material: DIAMOND_SWORD
+        amount: 1
+      diaPick:
+        material: DIAMOND_PICKAXE
+        amount: 1
+      diaChest:
+        material: DIAMOND_CHESTPLATE
+        amount: 1
+      diaLegs:
+        material: DIAMOND_LEGGINGS
+        amount: 1
+      diaHelm:
+        material: DIAMOND_HELMET
+        amount: 1
+      diaBoots:
+        material: DIAMOND_BOOTS
+        amount: 1
+      enderpearls:
+        material: ENDER_PEARL
+        amount: 16
+      bow:
+        material: BOW
+        amount: 1
+      obsidian:
+        material: OBSIDIAN
+        amount: 16
+    factory: Military factory
+  MatSynth:
+    name: Upgrade to Material Synthesizer
+    production_time: 10s
+    type: UPGRADE
+    input:
+      stone:
+        material: STONE
+        amount: 1
+      iron:
+        material: IRON_INGOT
+        amount: 1
+      redstoneBlock:
+        material: REDSTONE_BLOCK
+        amount: 1
+      diamond:
+        material: DIAMOND
+        amount: 1
+      emerald:
+        material: EMERALD
+        amount: 1
+      concrete:
+        material: GRAVEL
+        amount: 1
+        lore:
+        - Reinforce then let it set!
+    factory: Material Synthesizer
+  MiningFac:
+    name: Upgrade to Mining factory
+    production_time: 20s
+    type: UPGRADE
+    input:
+      ironblock:
+        material: IRON_BLOCK
+        amount: 16
+      diamonds:
+        material: DIAMOND_BLOCK
+        amount: 8
+      emeralds:
+        material: EMERALD
+        amount: 16
+      lapisblock:
+        material: LAPIS_BLOCK
+        amount: 16
+      coalblock:
+        material: COAL_BLOCK
+        amount: 64
+    factory: Mining factory
+  AlchemyFac:
+    name: Upgrade to Alchemy factory
+    production_time: 10s
+    type: UPGRADE
+    input:
+      netherwart:
+        material: NETHER_STALK
+        amount: 16
+      blazerod:
+        material: BLAZE_ROD
+        amount: 4
+      magmacream:
+        material: MAGMA_CREAM
+        amount: 4
+      ghasttear:
+        material: GHAST_TEAR
+        amount: 1
+      sugar:
+        material: SUGAR
+        amount: 4
+      melon:
+        material: SPECKLED_MELON
+        amount: 4
+      glowstone:
+        material: SUGAR
+        amount: 4
+      redstone:
+        material: REDSTONE
+        amount: 4
+      fermentedspidereye:
+        material: FERMENTED_SPIDER_EYE
+        amount: 4
+      spidereye:
+        material: SPIDER_EYE
+        amount: 4
+      goldencarrot:
+        material: GOLDEN_CARROT
+        amount: 4
+      pufferfish:
+        material: RAW_FISH
+        durability: 3
+        amount: 1
+      rabbitfoot:
+        material: RABBIT_FOOT
+        amount: 1
+      dragonsbreath:
+        material: DRAGONS_BREATH
+        amount: 1
+    factory: Alchemy factory
+  BalanceFac:
+    name: Upgrade to Balance factory
+    production_time: 20s
+    type: UPGRADE
+    input:
+      magmacream:
+        material: MAGMA_CREAM
+        amount: 4
+      netherwart:
+        material: NETHER_STALK
+        amount: 32
+    factory: Balance factory
+  ProductionFac:
+    name: Upgrade to Production factory
+    production_time: 20s
+    type: UPGRADE
+    input:
+      stone:
+        material: COBBLESTONE
+        amount: 32
+      sand:
+        material: SAND
+        amount: 32
+      wood:
+        material: LOGS
+        amount: 16
+        durability: -1
+    factory: Production factory
+  LotteryFac:
+    name: Upgrade to Lottery factory
+    production_time: 20s
+    type: UPGRADE
+    input:
+      diamond:
+        material: DIAMOND
+        amount: 1
+      iron:
+        material: IRON_INGOT
+        amount: 8
+      redstoneblock:
+        material: REDSTONE_BLOCK
+        amount: 16
+      emerald:
+        material: EMERALD
+        amount: 1
+      stone:
+        material: STONE
+        amount: 32
+    factory: Lottery factory
