@@ -49,6 +49,10 @@ factories:
     - Upgrade to Military factory
     - Upgrade to Mining factory
     - Upgrade to Alchemy factory
+    - Upgrade to Balance factory
+    - Upgrade to Production factory
+    - Upgrade to Material Synthesizer
+    - Try your luck at the lottery
     - Accident Repair
   equipmentFactory:
     type: FCCUPGRADE
@@ -62,6 +66,7 @@ factories:
     - Craft U4 Chestplate
     - Craft U4 Leggings
     - Craft U4 Boots
+# U = Unbreaking, E = Efficiency
     - Craft U5E7 Pickaxe
     - Craft U5E7 Shovel
     - Craft U5E7 Axe
@@ -70,6 +75,7 @@ factories:
     - Craft U5 Chestplate
     - Craft U5 Leggings
     - Craft U5 Boots
+#
     - Craft U6E8 Pickaxe
     - Craft U6E8 Shovel
     - Craft U6E8 Axe
@@ -78,6 +84,7 @@ factories:
     - Craft U6 Chestplate
     - Craft U6 Leggings
     - Craft U6 Boots
+#
     - Craft U7E9 Pickaxe
     - Craft U7E9 Shovel
     - Craft U7E9 Axe
@@ -94,7 +101,6 @@ factories:
     - Forge a Town bastion
     - Forge a Vault bastion
     - Forge an Assault bastion
-    - Convert Snitch
     - Accident Repair
   miningFac:
     type: FCCUPGRADE
@@ -116,10 +122,10 @@ factories:
     name: Alchemy factory
     recipes:
     - Brew Haste Potion
-    - Speed III
-    - Regen 4m
-    - Invisibility II
-    - Brewery Lottery
+    - Brew Speed III Potion
+    - Brew Regen Potion
+    - Brew Invisibility II Potion
+    - Brewery Material Lottery
     - Accident Repair
   balanceFac:
     type: FCCUPGRADE
@@ -133,6 +139,7 @@ factories:
     name: Production factory
     recipes:
     - Smelt Stone
+    - Smelt Stone Bulk
     - Accident Repair
   materialSynth:
     type: FCCUPGRADE
@@ -140,18 +147,23 @@ factories:
     recipes:
     - Mix Concrete
     - Steel Reinforcement
+    - Ender Chest Reinforcement
+# E = Efficiency
     - E6 Redstone
     - E7 Redstone
     - E8 Redstone
     - E9 Redstone
+#
     - E6 Iron
     - E7 Iron
     - E8 Iron
     - E9 Iron
+#
     - E6 Emerald
     - E7 Emerald
     - E8 Emerald
     - E9 Emerald
+#
     - E6 Diamond
     - E7 Diamond
     - E8 Diamond
@@ -162,12 +174,13 @@ factories:
     name: Lottery Machine
     recipes:
     - Stone Lottery
-    - Redstone Block Lottery
     - Iron Lottery
-    - Emerald Lottery
     - Diamond Lottery
     - Diamond Block Lottery
     - Accident Repair
+
+#Recipes
+
 recipes:
   repair:
     name: Accident Repair
@@ -1164,6 +1177,241 @@ recipes:
           type: SPEED
           upgraded: false
           extended: true
+  smeltstone:
+    name: Smelt Stone
+    production_time: 10s
+    type: PRODUCTION
+    input:
+      diapick:
+        material: COBBLESTONE
+        amount: 64
+    output:
+      glowstone:
+        material: STONE
+        amount: 72
+  smeltstonebulk:
+    name: Smelt Stone Bulk
+    production_time: 10s
+    type: PRODUCTION
+    input:
+      diapick:
+        material: COBBLESTONE
+        amount: 576
+    output:
+      glowstone:
+        material: STONE
+        amount: 640
+  StoneLottery:
+    type: RANDOM
+    name: Try your chances at the stone lottery
+    production_time: 5s
+    input:
+      stone:
+        material: STONE
+        amount: 64
+    outputs:
+      1:
+        chance: 0.1
+        logs:
+          material: LOG
+          amount: 16
+      2:
+        chance: 0.1
+        logs:
+          material: LOG
+          durability: 1
+          amount: 16
+      3:
+        chance: 0.1
+        logs:
+          material: LOG
+          durability: 2
+          amount: 16
+      4:
+        chance: 0.1
+        logs:
+          material: LOG
+          durability: 3
+          amount: 16
+      5:
+        chance: 0.1
+        ironpick:
+          material: IRON_PICKAXE
+          durability: 150
+          amount: 1
+      6:
+        chance: 0.1
+        ironaxe:
+          material: IRON_AXE
+          durability: 150
+          amount: 1
+      7:
+        chance: 0.1
+        ironshovel:
+          material: IRON_SPADE
+          durability: 150
+          amount: 1
+      8:
+        chance: 0.1
+        ironhelm:
+          material: IRON_HELMET
+          durability: 150
+          amount: 1
+      9:
+        chance: 0.1
+        ironchestplate:
+          material: IRON_CHESTPLATE
+          durability: 150
+          amount: 1
+      10:
+        chance: 0.1
+        ironlegs:
+          material: IRON_LEGGINGS
+          durability: 150
+          amount: 1
+      11:
+        chance: 0.1
+        ironboots:
+          material: IRON_BOOTS
+          durability: 150
+          amount: 1
+      12:
+        chance: 0.1
+        ironsword:
+          material: IRON_SWORD
+          durability: 150
+          amount: 1
+      13:
+        chance: 0.1
+        acaciawood:
+          material: LOG_2
+          durability: 2
+          amount: 16
+      14:
+        chance: 0.1
+        darkoakwood:
+          material: LOG_2
+          durability: 1
+          amount: 16
+      15:
+        chance: 0.1
+        idname:
+          material: IRON_INGOT
+          durability: 1
+          amount: 16
+      16:
+        chance: 0.1
+        idname:
+          material: IRON_BLOCK
+          durability: 1
+          amount: 16
+  IronLottery:
+    type: RANDOM
+    name: Try your chances at the Iron Lottery
+    production_time: 5s
+    input:
+      stone:
+        material: IRON_INGOT
+        amount: 8
+    outputs:
+      1:
+        chance: 0.1
+        logs:
+          material: LOG
+          amount: 16
+      2:
+        chance: 0.1
+        logs:
+          material: LOG
+          durability: 1
+          amount: 16
+      3:
+        chance: 0.1
+        logs:
+          material: LOG
+          durability: 2
+          amount: 16
+      4:
+        chance: 0.1
+        logs:
+          material: LOG
+          durability: 3
+          amount: 16
+      5:
+        chance: 0.1
+        ironpick:
+          material: DIAMOND_PICKAXE
+          durability: 150
+          amount: 1
+      6:
+        chance: 0.1
+        ironaxe:
+          material: DIAMOND_AXE
+          durability: 150
+          amount: 1
+      7:
+        chance: 0.1
+        ironshovel:
+          material: DIAMOND_SPADE
+          durability: 150
+          amount: 1
+      8:
+        chance: 0.1
+        ironhelm:
+          material: CHAINMAIL_HELMET
+          durability: 150
+          amount: 1
+      9:
+        chance: 0.1
+        ironchestplate:
+          material: CHAINMAIL_CHESTPLATE
+          durability: 150
+          amount: 1
+      10:
+        chance: 0.1
+        ironlegs:
+          material: CHAILMAIL_LEGGINGS
+          durability: 150
+          amount: 1
+      11:
+        chance: 0.1
+        ironboots:
+          material: CHAINMAIL_BOOTS
+          durability: 150
+          amount: 1
+      12:
+        chance: 0.1
+        ironsword:
+          material: DIAMOND_SWORD
+          durability: 150
+          amount: 1
+      13:
+        chance: 0.1
+        acaciawood:
+          material: LOG_2
+          durability: 2
+          amount: 16
+      14:
+        chance: 0.1
+        darkoakwood:
+          material: LOG_2
+          durability: 1
+          amount: 16
+      15:
+        chance: 0.1
+        idname:
+          material: DIAMOND
+          durability: 1
+          amount: 16
+      16:
+        chance: 0.1
+        idname:
+          material: IRON_BLOCK
+          durability: 1
+          amount: 16
+
+#Upgrades
+
   EquipmentFac:
     name: Upgrade to Equipment factory
     production_time: 10s
@@ -1343,7 +1591,7 @@ recipes:
         durability: -1
     factory: Production factory
   LotteryFac:
-    name: Upgrade to Lottery factory
+    name: Try your luck at the lottery
     production_time: 20s
     type: UPGRADE
     input:
