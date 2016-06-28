@@ -1673,7 +1673,6 @@ recipes:
             enchant: DURABILITY
             level: 7
       11:
-        chance: 0.01
         diaBoots:
           material: DIAMOND_BOOTS
           durability: 350
