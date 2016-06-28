@@ -1401,14 +1401,12 @@ recipes:
         chance: 0.1
         idname:
           material: DIAMOND
-          durability: 1
-          amount: 16
+          amount: 1
       16:
         chance: 0.1
         idname:
           material: IRON_BLOCK
-          durability: 1
-          amount: 16
+          amount: 1
 
 #Upgrades
 
