@@ -1443,48 +1443,101 @@ recipes:
           material: DIAMOND_PICKAXE
           durability: 350
           amount: 1
+        enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 3
+          efficiency:
+            enchant: DIG_SPEED
+            level: 5
       6:
         chance: 0.1
         diaAxe:
           material: DIAMOND_AXE
           durability: 350
           amount: 1
+        enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 3
+          efficiency:
+            enchant: DIG_SPEED
+            level: 5
       7:
         chance: 0.1
         diashovel:
           material: DIAMOND_SPADE
           durability: 350
           amount: 1
+        enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 3
+          efficiency:
+            enchant: DIG_SPEED
+            level: 5
       8:
         chance: 0.1
         diamondhelm:
           material: DIAMOND_HELMET
           durability: 350
           amount: 1
+        enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 3
+          prot:
+            enchant: PROTECTION
+            level: 4
       9:
         chance: 0.1
         diamondchest:
           material: DIAMOND_CHESTPLATE
           durability: 350
           amount: 1
+        enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 3
+          prot:
+            enchant: PROTECTION
+            level: 4
       10:
         chance: 0.1
         diamondlegs:
           material: DIAMOND_LEGGINGS
           durability: 350
           amount: 1
+        enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 3
+          prot:
+            enchant: PROTECTION
+            level: 4
       11:
         chance: 0.1
         diaBoots:
           material: DIAMOND_BOOTS
           durability: 350
           amount: 1
+        enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 3
+          prot:
+            enchant: PROTECTION
+            level: 4
       12:
         chance: 0.1
-        ironsword:
+        diamondsword:
           material: DIAMOND_SWORD
           durability: 350
           amount: 1
+        enchants:
+          looting:
+            enchant: LOOTING
+            level: 3
       13:
         chance: 0.1
         acaciawood:
@@ -1556,48 +1609,89 @@ recipes:
           material: DIAMOND_PICKAXE
           durability: 350
           amount: 1
+        enchants:
+          efficiency:
+            enchant: DIG_SPEED
+            level: 6
+          unbreaking:
+            enchant: DURABILITY
+            level: 8
       6:
         chance: 0.1
         diaAxe:
           material: DIAMOND_AXE
           durability: 350
           amount: 1
+        enchants:
+          efficiency:
+            enchant: DIG_SPEED
+            level: 6
+          unbreaking:
+            enchant: DURABILITY
+            level: 8
       7:
         chance: 0.1
         diashovel:
           material: DIAMOND_SPADE
           durability: 350
           amount: 1
+        enchants:
+          efficiency:
+            enchant: DIG_SPEED
+            level: 6
+          unbreaking:
+            enchant: DURABILITY
+            level: 8
       8:
         chance: 0.1
         diamondhelm:
           material: DIAMOND_HELMET
           durability: 350
           amount: 1
+        enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 7
       9:
         chance: 0.1
         diamondchest:
           material: DIAMOND_CHESTPLATE
           durability: 350
           amount: 1
+        enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 7
       10:
         chance: 0.1
         diamondlegs:
           material: DIAMOND_LEGGINGS
           durability: 350
           amount: 1
+        enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 7
       11:
         chance: 0.1
         diaBoots:
           material: DIAMOND_BOOTS
           durability: 350
           amount: 1
+        enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 7
       12:
         chance: 0.1
-        ironsword:
+        diamondsword:
           material: DIAMOND_SWORD
           durability: 350
           amount: 1
+        enchants:
+          looting:
+            enchant: LOOTING
+            level: 4
       13:
         chance: 0.1
         acaciawood:
