@@ -1297,14 +1297,12 @@ recipes:
         chance: 0.1
         idname:
           material: IRON_INGOT
-          durability: 1
-          amount: 16
+          amount: 1
       16:
         chance: 0.1
         idname:
           material: IRON_BLOCK
-          durability: 1
-          amount: 16
+          amount: 1
   IronLottery:
     type: RANDOM
     name: Try your chances at the Iron Lottery
