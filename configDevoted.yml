@@ -40,6 +40,10 @@ factories:
     - Upgrade to Military factory
     - Upgrade to Mining factory
     - Upgrade to Alchemy factory
+    - Upgrade to Balance factory
+    - Upgrade to Production factory
+    - Upgrade to Material Synthesizer
+    - Try your luck at lottery
     - Accident Repair
   equipmentFactory:
     type: FCCUPGRADE
@@ -85,7 +89,6 @@ factories:
     - Forge a Town bastion
     - Forge a Vault bastion
     - Forge an Assault bastion
-    - Convert Snitch
     - Accident Repair
   miningFac:
     type: FCCUPGRADE
@@ -1155,6 +1158,30 @@ recipes:
           type: SPEED
           upgraded: false
           extended: true
+  smeltstone:
+    name: Smelt Stone
+    production_time: 10s
+    type: PRODUCTION
+    input:
+      cobble:
+        material: COBBLESTONE
+        amount: 64
+    output:
+      stone:
+        material: STONE
+        amount: 72
+  smeltstonebulk:
+    name: Smelt Stone Bulk
+    production_time: 10s
+    type: PRODUCTION
+    input:
+      cobble:
+        material: COBBLESTONE
+        amount: 576
+    output:
+      stone:
+        material: STONE
+        amount: 640
   EquipmentFac:
     name: Upgrade to Equipment factory
     production_time: 10s
@@ -1237,7 +1264,7 @@ recipes:
     factory: Material Synthesizer
   MiningFac:
     name: Upgrade to Mining factory
-    production_time: 20s
+    production_time: 10s
     type: UPGRADE
     input:
       ironblock:
@@ -1307,7 +1334,7 @@ recipes:
     factory: Alchemy factory
   BalanceFac:
     name: Upgrade to Balance factory
-    production_time: 20s
+    production_time: 10s
     type: UPGRADE
     input:
       magmacream:
@@ -1319,7 +1346,7 @@ recipes:
     factory: Balance factory
   ProductionFac:
     name: Upgrade to Production factory
-    production_time: 20s
+    production_time: 10s
     type: UPGRADE
     input:
       stone:
@@ -1334,8 +1361,8 @@ recipes:
         durability: -1
     factory: Production factory
   LotteryFac:
-    name: Upgrade to Lottery factory
-    production_time: 20s
+    name: Try your luck at lottery
+    production_time: 10s
     type: UPGRADE
     input:
       diamond:
