@@ -1567,7 +1567,7 @@ recipes:
           amount: 1
       18:
         chance: 0.01
-        diablock:
+        acaciasapling:
           material: SAPLING
           durability: 4
           amount: 8
@@ -1720,7 +1720,7 @@ recipes:
           amount: 8
       18:
         chance: 0.01
-        diablock:
+        acaciasapling:
           material: SAPLING
           durability: 4
           amount: 16
@@ -1906,7 +1906,7 @@ recipes:
     factory: Production factory
   LotteryFac:
     name: Try your luck at the lottery
-    production_time: 20s
+    production_time: 10s
     type: UPGRADE
     input:
       diamond:
