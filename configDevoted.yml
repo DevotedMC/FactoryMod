@@ -1,3 +1,12 @@
+#TODO:     
+#NBT related items (Potions, bastion chicken spawn egg)   
+#Durability of Unbreaking 4-7 items   
+#Fix lottery recipes to not spew errors   
+#HiddenOre specific drops   
+#Specific Citadel reinforcement materials   
+#Balance pass   
+#Config cleanup
+#
 # 
 #   inputmat1:
 #       material: STONE
@@ -57,6 +66,7 @@ factories:
     - Craft U4 Chestplate
     - Craft U4 Leggings
     - Craft U4 Boots
+# U = Unbreaking, E = Efficiency
     - Craft U5E7 Pickaxe
     - Craft U5E7 Shovel
     - Craft U5E7 Axe
@@ -65,6 +75,7 @@ factories:
     - Craft U5 Chestplate
     - Craft U5 Leggings
     - Craft U5 Boots
+#
     - Craft U6E8 Pickaxe
     - Craft U6E8 Shovel
     - Craft U6E8 Axe
@@ -73,6 +84,7 @@ factories:
     - Craft U6 Chestplate
     - Craft U6 Leggings
     - Craft U6 Boots
+#
     - Craft U7E9 Pickaxe
     - Craft U7E9 Shovel
     - Craft U7E9 Axe
@@ -136,18 +148,22 @@ factories:
     - Mix Concrete
     - Steel Reinforcement
     - Ender Chest Reinforcement
+# E = Efficiency
     - E6 Redstone
     - E7 Redstone
     - E8 Redstone
     - E9 Redstone
+#
     - E6 Iron
     - E7 Iron
     - E8 Iron
     - E9 Iron
+#
     - E6 Emerald
     - E7 Emerald
     - E8 Emerald
     - E9 Emerald
+#
     - E6 Diamond
     - E7 Diamond
     - E8 Diamond
@@ -1191,95 +1207,95 @@ recipes:
         material: STONE
         amount: 1
     outputs:
-      '1':
+      1:
         chance: 0.85
         logs:
           material: LOG
           amount: 16
-      '2':
+      2:
         chance: 0.01
         logs:
           material: LOG
           durability: 1
           amount: 16
-      '3':
+      3:
         chance: 0.01
         logs:
           material: LOG
           durability: 2
           amount: 16
-      '4':
+      4:
         chance: 0.01
         logs:
           material: LOG
           durability: 3
           amount: 16
-      '5':
+      5:
         chance: 0.01
         ironpick:
           material: IRON_PICKAXE
           durability: 150
           amount: 1
-      '6':
+      6:
         chance: 0.01
         ironaxe:
           material: IRON_AXE
           durability: 150
           amount: 1
-      '7':
+      7:
         chance: 0.01
         ironshovel:
           material: IRON_SPADE
           durability: 150
           amount: 1
-      '8':
+      8:
         chance: 0.01
         ironhelm:
           material: IRON_HELMET
           durability: 150
           amount: 1
-      '9':
+      9:
         chance: 0.01
         ironchestplate:
           material: IRON_CHESTPLATE
           durability: 150
           amount: 1
-      '10':
+      10:
         chance: 0.01
         ironlegs:
           material: IRON_LEGGINGS
           durability: 150
           amount: 1
-      '11':
+      11:
         chance: 0.01
         ironboots:
           material: IRON_BOOTS
           durability: 150
           amount: 1
-      '12':
+      12:
         chance: 0.01
         ironsword:
           material: IRON_SWORD
           durability: 150
           amount: 1
-      '13':
+      13:
         chance: 0.01
         acaciawood:
           material: LOG_2
           durability: 2
           amount: 16
-      '14':
+      14:
         chance: 0.01
         darkoakwood:
           material: LOG_2
           durability: 1
           amount: 16
-      '15':
+      15:
         chance: 0.01
         iron:
           material: IRON_INGOT
           amount: 1
-      '16':
+      16:
         chance: 0.01
         ironblock:
           material: IRON_BLOCK
@@ -1293,95 +1309,95 @@ recipes:
         material: IRON_INGOT
         amount: 1
     outputs:
-      '1':
+      1:
         chance: 0.85
         oaklogs:
           material: LOG
           amount: 32
-      '2':
+      2:
         chance: 0.01
         sprucelogs:
           material: LOG
           durability: 1
           amount: 32
-      '3':
+      3:
         chance: 0.01
         birchlogs:
           material: LOG
           durability: 2
           amount: 32
-      '4':
+      4:
         chance: 0.01
         junglelogs:
           material: LOG
           durability: 3
           amount: 32
-      '5':
+      5:
         chance: 0.01
         ironpick:
           material: DIAMOND_PICKAXE
           durability: 150
           amount: 1
-      '6':
+      6:
         chance: 0.01
         ironaxe:
           material: DIAMOND_AXE
           durability: 150
           amount: 1
-      '7':
+      7:
         chance: 0.01
         ironshovel:
           material: DIAMOND_SPADE
           durability: 150
           amount: 1
-      '8':
+      8:
         chance: 0.01
         ironhelm:
           material: CHAINMAIL_HELMET
           durability: 150
           amount: 1
-      '9':
+      9:
         chance: 0.01
         ironchestplate:
           material: CHAINMAIL_CHESTPLATE
           durability: 150
           amount: 1
-      '10':
+      10:
         chance: 0.01
         ironlegs:
           material: CHAILMAIL_LEGGINGS
           durability: 150
           amount: 1
-      '11':
+      11:
         chance: 0.01
         ironboots:
           material: CHAINMAIL_BOOTS
           durability: 150
           amount: 1
-      '12':
+      12:
         chance: 0.01
         ironsword:
           material: DIAMOND_SWORD
           durability: 150
           amount: 1
-      '13':
+      13:
         chance: 0.01
         acaciawood:
           material: LOG_2
           durability: 0
           amount: 32
-      '14':
+      14:
         chance: 0.01
         darkoakwood:
           material: LOG_2
           durability: 1
           amount: 32
-      '15':
+      15:
         chance: 0.01
         diamond:
           material: DIAMOND
           amount: 1
-      '16':
+      16:
         chance: 0.01
         ironblock:
           material: IRON_BLOCK
@@ -1395,30 +1411,30 @@ recipes:
         material: DIAMOND
         amount: 1
     outputs:
-      '1':
+      1:
         chance: 0.83
         oaklogs:
           material: LOG
           amount: 64
-      '2':
+      2:
         chance: 0.01
         sprucelogs:
           material: LOG
           durability: 1
           amount: 64
-      '3':
+      3:
         chance: 0.01
         birchlogs:
           material: LOG
           durability: 2
           amount: 64
-      '4':
+      4:
         chance: 0.01
         junglelogs:
           material: LOG
           durability: 3
           amount: 64
-      '5':
+      5:
         chance: 0.01
         diapick:
           material: DIAMOND_PICKAXE
@@ -1431,7 +1447,7 @@ recipes:
           efficiency:
             enchant: DIG_SPEED
             level: 5
-      '6':
+      6:
         chance: 0.01
         diaAxe:
           material: DIAMOND_AXE
@@ -1444,7 +1460,7 @@ recipes:
           efficiency:
             enchant: DIG_SPEED
             level: 5
-      '7':
+      7:
         chance: 0.01
         diashovel:
           material: DIAMOND_SPADE
@@ -1457,7 +1473,7 @@ recipes:
           efficiency:
             enchant: DIG_SPEED
             level: 5
-      '8':
+      8:
         chance: 0.01
         diamondhelm:
           material: DIAMOND_HELMET
@@ -1470,7 +1486,7 @@ recipes:
           prot:
             enchant: PROTECTION
             level: 4
-      '9':
+      9:
         chance: 0.01
         diamondchest:
           material: DIAMOND_CHESTPLATE
@@ -1483,7 +1499,7 @@ recipes:
           prot:
             enchant: PROTECTION
             level: 4
-      '10':
+      10:
         chance: 0.01
         diamondlegs:
           material: DIAMOND_LEGGINGS
@@ -1496,7 +1512,7 @@ recipes:
           prot:
             enchant: PROTECTION
             level: 4
-      '11':
+      11:
         chance: 0.01
         diaBoots:
           material: DIAMOND_BOOTS
@@ -1509,7 +1525,7 @@ recipes:
           prot:
             enchant: PROTECTION
             level: 4
-      '12':
+      12:
         chance: 0.01
         diamondsword:
           material: DIAMOND_SWORD
@@ -1519,34 +1535,34 @@ recipes:
           looting:
             enchant: LOOTING
             level: 3
-      '13':
+      13:
         chance: 0.01
         acaciawood:
           material: LOG_2
           durability: 0
           amount: 64
-      '14':
+      14:
         chance: 0.01
         darkoakwood:
           material: LOG_2
           durability: 1
           amount: 64
-      '15':
+      15:
         chance: 0.01
         diamond:
           material: DIAMOND
           amount: 1
-      '16':
+      16:
         chance: 0.01
         ironblock:
           material: IRON_BLOCK
           amount: 1
-      '17':
+      17:
         chance: 0.01
         diablock:
           material: DIAMOND_BLOCK
           amount: 1
-      '18':
+      18:
         chance: 0.01
         acaciasapling:
           material: SAPLING
@@ -1561,30 +1577,30 @@ recipes:
         material: DIAMOND_BLOCK
         amount: 1
     outputs:
-      '1':
+      1:
         chance: 0.83
         oaklogs:
           material: LOG
           amount: 64
-      '2':
+      2:
         chance: 0.01
         sprucelogs:
           material: LOG
           durability: 1
           amount: 64
-      '3':
+      3:
         chance: 0.01
         birchlogs:
           material: LOG
           durability: 2
           amount: 64
-      '4':
+      4:
         chance: 0.01
         junglelogs:
           material: LOG
           durability: 3
           amount: 64
-      '5':
+      5:
         chance: 0.01
         diapick:
           material: DIAMOND_PICKAXE
@@ -1597,7 +1613,7 @@ recipes:
           efficiency:
             enchant: DIG_SPEED
             level: 5
-      '6':
+      6:
         chance: 0.01
         diaAxe:
           material: DIAMOND_AXE
@@ -1610,7 +1626,7 @@ recipes:
           efficiency:
             enchant: DIG_SPEED
             level: 5
-      '7':
+      7:
         chance: 0.01
         diashovel:
           material: DIAMOND_SPADE
@@ -1623,7 +1639,7 @@ recipes:
           efficiency:
             enchant: DIG_SPEED
             level: 5
-      '8':
+      8:
         chance: 0.01
         diamondhelm:
           material: DIAMOND_HELMET
@@ -1636,7 +1652,7 @@ recipes:
           prot:
             enchant: PROTECTION
             level: 4
-      '9':
+      9:
         chance: 0.01
         diamondchest:
           material: DIAMOND_CHESTPLATE
@@ -1649,7 +1665,7 @@ recipes:
           prot:
             enchant: PROTECTION
             level: 4
-      '10':
+      10:
         chance: 0.01
         diamondlegs:
           material: DIAMOND_LEGGINGS
@@ -1662,7 +1678,7 @@ recipes:
           prot:
             enchant: PROTECTION
             level: 4
-      '11':
+      11:
         chance: 0.01
         diaBoots:
           material: DIAMOND_BOOTS
@@ -1675,7 +1691,7 @@ recipes:
           prot:
             enchant: PROTECTION
             level: 4
-      '12':
+      12:
         chance: 0.01
         diamondsword:
           material: DIAMOND_SWORD
@@ -1685,34 +1701,34 @@ recipes:
           looting:
             enchant: LOOTING
             level: 3
-      '13':
+      13:
         chance: 0.01
         acaciawood:
           material: LOG_2
           durability: 0
           amount: 64
-      '14':
+      14:
         chance: 0.01
         darkoakwood:
           material: LOG_2
           durability: 1
           amount: 64
-      '15':
+      15:
         chance: 0.01
         diamond:
           material: DIAMOND
           amount: 1
-      '16':
+      16:
         chance: 0.01
         ironblock:
           material: IRON_BLOCK
           amount: 1
-      '17':
+      17:
         chance: 0.01
         diablock:
           material: DIAMOND_BLOCK
           amount: 1
-      '18':
+      18:
         chance: 0.01
         acaciasapling:
           material: SAPLING
