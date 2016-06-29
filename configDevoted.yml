@@ -1210,8 +1210,9 @@ recipes:
         material: STONE
         amount: 1
     outputs:
+    display: 17
       1:
-        chance: 0.85
+        chance: 0.84
         logs:
           material: LOG
           amount: 16
@@ -1303,6 +1304,11 @@ recipes:
         ironblock:
           material: IRON_BLOCK
           amount: 1
+      17:
+        chance: 0.01
+        stone:
+          material: STONE
+          amount: 64
   IronLottery:
     type: RANDOM
     name: Try your chances at the Iron Lottery
@@ -1312,6 +1318,7 @@ recipes:
         material: IRON_INGOT
         amount: 1
     outputs:
+    display: 16
       1:
         chance: 0.85
         oaklogs:
@@ -1414,6 +1421,7 @@ recipes:
         material: DIAMOND
         amount: 1
     outputs:
+    display: 15
       1:
         chance: 0.83
         oaklogs:
@@ -1580,6 +1588,7 @@ recipes:
         material: DIAMOND_BLOCK
         amount: 1
     outputs:
+    display: 17
       1:
         chance: 0.83
         oaklogs:
