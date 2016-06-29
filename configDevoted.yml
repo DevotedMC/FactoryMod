@@ -178,6 +178,9 @@ factories:
     - Try your chances at the Diamond Lottery
     - Try your chances at the Diamond Block Lottery
     - Accident Repair
+
+#Recipes
+
 recipes:
   repair:
     name: Accident Repair
@@ -1734,6 +1737,9 @@ recipes:
           material: SAPLING
           durability: 4
           amount: 8
+
+# Upgrades
+
   EquipmentFac:
     name: Upgrade to Equipment factory
     production_time: 10s
