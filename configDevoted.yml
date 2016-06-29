@@ -1201,114 +1201,6 @@ recipes:
       stone:
         material: STONE
         amount: 640
-  StoneLottery:
-    type: RANDOM
-    name: Try your chances at the Stone Lottery
-    production_time: 5s
-    input:
-      stone:
-        material: STONE
-        amount: 1
-    outputs:
-    display: 17
-      1:
-        chance: 0.84
-        logs:
-          material: LOG
-          amount: 16
-      2:
-        chance: 0.01
-        logs:
-          material: LOG
-          durability: 1
-          amount: 16
-      3:
-        chance: 0.01
-        logs:
-          material: LOG
-          durability: 2
-          amount: 16
-      4:
-        chance: 0.01
-        logs:
-          material: LOG
-          durability: 3
-          amount: 16
-      5:
-        chance: 0.01
-        ironpick:
-          material: IRON_PICKAXE
-          durability: 150
-          amount: 1
-      6:
-        chance: 0.01
-        ironaxe:
-          material: IRON_AXE
-          durability: 150
-          amount: 1
-      7:
-        chance: 0.01
-        ironshovel:
-          material: IRON_SPADE
-          durability: 150
-          amount: 1
-      8:
-        chance: 0.01
-        ironhelm:
-          material: IRON_HELMET
-          durability: 150
-          amount: 1
-      9:
-        chance: 0.01
-        ironchestplate:
-          material: IRON_CHESTPLATE
-          durability: 150
-          amount: 1
-      10:
-        chance: 0.01
-        ironlegs:
-          material: IRON_LEGGINGS
-          durability: 150
-          amount: 1
-      11:
-        chance: 0.01
-        ironboots:
-          material: IRON_BOOTS
-          durability: 150
-          amount: 1
-      12:
-        chance: 0.01
-        ironsword:
-          material: IRON_SWORD
-          durability: 150
-          amount: 1
-      13:
-        chance: 0.01
-        acaciawood:
-          material: LOG_2
-          durability: 2
-          amount: 16
-      14:
-        chance: 0.01
-        darkoakwood:
-          material: LOG_2
-          durability: 1
-          amount: 16
-      15:
-        chance: 0.01
-        iron:
-          material: IRON_INGOT
-          amount: 1
-      16:
-        chance: 0.01
-        ironblock:
-          material: IRON_BLOCK
-          amount: 1
-      17:
-        chance: 0.01
-        stone:
-          material: STONE
-          amount: 64
   IronLottery:
     type: RANDOM
     name: Try your chances at the Iron Lottery
@@ -1412,13 +1304,13 @@ recipes:
         ironblock:
           material: IRON_BLOCK
           amount: 1
-  DiamondLottery:
+  EmeraldLottery:
     type: RANDOM
-    name: Try your chances at the Diamond Lottery
+    name: Try your chances at the Emerald Lottery
     production_time: 5s
     input:
-      diamond:
-        material: DIAMOND
+      emerald:
+        material: EMERALD
         amount: 1
     outputs:
     display: 15
@@ -1579,13 +1471,13 @@ recipes:
           material: SAPLING
           durability: 4
           amount: 8
-  DiamondBlockLottery:
+  DiamondLottery:
     type: RANDOM
-    name: Try your chances at the Diamond Block Lottery
+    name: Try your chances at the Diamond Lottery
     production_time: 5s
     input:
-      diamondblock:
-        material: DIAMOND_BLOCK
+      diamond:
+        material: DIAMOND
         amount: 1
     outputs:
     display: 17
