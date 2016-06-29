@@ -173,10 +173,9 @@ factories:
     type: FCCUPGRADE
     name: Lottery factory
     recipes:
-    - Try your chances at the Stone Lottery
     - Try your chances at the Iron Lottery
+    - Try your chances at the Emerald Lottery
     - Try your chances at the Diamond Lottery
-    - Try your chances at the Diamond Block Lottery
     - Accident Repair
 
 #Recipes
