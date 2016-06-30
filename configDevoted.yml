@@ -1200,6 +1200,7 @@ recipes:
         material: IRON_INGOT
         amount: 1
     outputs:
+    display: 16
       1:
         chance: 0.85
         oaklogs:
@@ -1302,6 +1303,7 @@ recipes:
         material: EMERALD
         amount: 1
     outputs:
+    display: 15
       1:
         chance: 0.83
         oaklogs:
@@ -1468,6 +1470,7 @@ recipes:
         material: DIAMOND
         amount: 1
     outputs:
+    display: 17
       1:
         chance: 0.83
         oaklogs:
