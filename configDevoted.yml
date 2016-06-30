@@ -1200,7 +1200,6 @@ recipes:
         material: IRON_INGOT
         amount: 1
     outputs:
-    display: 16
       1:
         chance: 0.85
         oaklogs:
@@ -1303,7 +1302,6 @@ recipes:
         material: EMERALD
         amount: 1
     outputs:
-    display: 15
       1:
         chance: 0.83
         oaklogs:
@@ -1470,7 +1468,6 @@ recipes:
         material: DIAMOND
         amount: 1
     outputs:
-    display: 17
       1:
         chance: 0.83
         oaklogs:
@@ -1805,8 +1802,9 @@ recipes:
         material: SAND
         amount: 32
       wood:
-        material: LOGS
+        material: LOG
         amount: 16
+        durability: -1
     factory: Production factory
   LotteryFac:
     name: Try your luck at the lottery
