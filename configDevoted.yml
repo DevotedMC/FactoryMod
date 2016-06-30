@@ -1,12 +1,3 @@
-#TODO:     
-#NBT related items (Potions, bastion chicken spawn egg)   
-#Durability of Unbreaking 4-7 items   
-#Fix lottery recipes to not spew errors   
-#HiddenOre specific drops   
-#Specific Citadel reinforcement materials   
-#Balance pass   
-#Config cleanup
-#
 # 
 #   inputmat1:
 #       material: STONE
@@ -173,11 +164,13 @@ factories:
     type: FCCUPGRADE
     name: Lottery factory
     recipes:
-    - Try your chances at the Stone Lottery
     - Try your chances at the Iron Lottery
+    - Try your chances at the Emerald Lottery
     - Try your chances at the Diamond Lottery
-    - Try your chances at the Diamond Block Lottery
     - Accident Repair
+
+#Recipes
+
 recipes:
   repair:
     name: Accident Repair
@@ -1198,108 +1191,6 @@ recipes:
       stone:
         material: STONE
         amount: 640
-  StoneLottery:
-    type: RANDOM
-    name: Try your chances at the Stone Lottery
-    production_time: 5s
-    input:
-      stone:
-        material: STONE
-        amount: 1
-    outputs:
-      1:
-        chance: 0.85
-        logs:
-          material: LOG
-          amount: 16
-      2:
-        chance: 0.01
-        logs:
-          material: LOG
-          durability: 1
-          amount: 16
-      3:
-        chance: 0.01
-        logs:
-          material: LOG
-          durability: 2
-          amount: 16
-      4:
-        chance: 0.01
-        logs:
-          material: LOG
-          durability: 3
-          amount: 16
-      5:
-        chance: 0.01
-        ironpick:
-          material: IRON_PICKAXE
-          durability: 150
-          amount: 1
-      6:
-        chance: 0.01
-        ironaxe:
-          material: IRON_AXE
-          durability: 150
-          amount: 1
-      7:
-        chance: 0.01
-        ironshovel:
-          material: IRON_SPADE
-          durability: 150
-          amount: 1
-      8:
-        chance: 0.01
-        ironhelm:
-          material: IRON_HELMET
-          durability: 150
-          amount: 1
-      9:
-        chance: 0.01
-        ironchestplate:
-          material: IRON_CHESTPLATE
-          durability: 150
-          amount: 1
-      10:
-        chance: 0.01
-        ironlegs:
-          material: IRON_LEGGINGS
-          durability: 150
-          amount: 1
-      11:
-        chance: 0.01
-        ironboots:
-          material: IRON_BOOTS
-          durability: 150
-          amount: 1
-      12:
-        chance: 0.01
-        ironsword:
-          material: IRON_SWORD
-          durability: 150
-          amount: 1
-      13:
-        chance: 0.01
-        acaciawood:
-          material: LOG_2
-          durability: 2
-          amount: 16
-      14:
-        chance: 0.01
-        darkoakwood:
-          material: LOG_2
-          durability: 1
-          amount: 16
-      15:
-        chance: 0.01
-        iron:
-          material: IRON_INGOT
-          amount: 1
-      16:
-        chance: 0.01
-        ironblock:
-          material: IRON_BLOCK
-          amount: 1
   IronLottery:
     type: RANDOM
     name: Try your chances at the Iron Lottery
@@ -1365,7 +1256,7 @@ recipes:
       10:
         chance: 0.01
         ironlegs:
-          material: CHAILMAIL_LEGGINGS
+          material: CHAINMAIL_LEGGINGS
           durability: 150
           amount: 1
       11:
@@ -1402,6 +1293,172 @@ recipes:
         ironblock:
           material: IRON_BLOCK
           amount: 1
+  EmeraldLottery:
+    type: RANDOM
+    name: Try your chances at the Emerald Lottery
+    production_time: 5s
+    input:
+      emerald:
+        material: EMERALD
+        amount: 1
+    outputs:
+      1:
+        chance: 0.83
+        oaklogs:
+          material: LOG
+          amount: 64
+      2:
+        chance: 0.01
+        sprucelogs:
+          material: LOG
+          durability: 1
+          amount: 64
+      3:
+        chance: 0.01
+        birchlogs:
+          material: LOG
+          durability: 2
+          amount: 64
+      4:
+        chance: 0.01
+        junglelogs:
+          material: LOG
+          durability: 3
+          amount: 64
+      5:
+        chance: 0.01
+        diapick:
+          material: DIAMOND_PICKAXE
+          durability: 350
+          amount: 1
+#        enchants:
+#          unbreaking:
+#            enchant: DURABILITY
+#            level: 3
+#          efficiency:
+#            enchant: DIG_SPEED
+#            level: 5
+      6:
+        chance: 0.01
+        diaAxe:
+          material: DIAMOND_AXE
+          durability: 350
+          amount: 1
+#        enchants:
+#          unbreaking:
+#            enchant: DURABILITY
+#            level: 3
+#          efficiency:
+#            enchant: DIG_SPEED
+#            level: 5
+      7:
+        chance: 0.01
+        diashovel:
+          material: DIAMOND_SPADE
+          durability: 350
+          amount: 1
+        enchants:
+#          unbreaking:
+#            enchant: DURABILITY
+#            level: 3
+#          efficiency:
+#            enchant: DIG_SPEED
+#            level: 5
+      8:
+        chance: 0.01
+        diamondhelm:
+          material: DIAMOND_HELMET
+          durability: 350
+          amount: 1
+#        enchants:
+#          unbreaking:
+#            enchant: DURABILITY
+#            level: 3
+#          prot:
+#            enchant: PROTECTION
+#            level: 4
+      9:
+        chance: 0.01
+        diamondchest:
+          material: DIAMOND_CHESTPLATE
+          durability: 350
+          amount: 1
+#        enchants:
+#          unbreaking:
+#            enchant: DURABILITY
+#            level: 3
+#          prot:
+#            enchant: PROTECTION
+#            level: 4
+      10:
+        chance: 0.01
+        diamondlegs:
+          material: DIAMOND_LEGGINGS
+          durability: 350
+          amount: 1
+#        enchants:
+#          unbreaking:
+#            enchant: DURABILITY
+#            level: 3
+#          prot:
+#            enchant: PROTECTION
+#            level: 4
+      11:
+        chance: 0.01
+        diaBoots:
+          material: DIAMOND_BOOTS
+          durability: 350
+          amount: 1
+#        enchants:
+#          unbreaking:
+#            enchant: DURABILITY
+#            level: 3
+#          prot:
+#            enchant: PROTECTION
+#            level: 4
+      12:
+        chance: 0.01
+        diamondsword:
+          material: DIAMOND_SWORD
+          durability: 350
+          amount: 1
+#        enchants:
+#          looting:
+#            enchant: LOOTING
+#            level: 3
+      13:
+        chance: 0.01
+        acaciawood:
+          material: LOG_2
+          durability: 0
+          amount: 64
+      14:
+        chance: 0.01
+        darkoakwood:
+          material: LOG_2
+          durability: 1
+          amount: 64
+      15:
+        chance: 0.01
+        diamond:
+          material: DIAMOND
+          amount: 1
+      16:
+        chance: 0.01
+        ironblock:
+          material: IRON_BLOCK
+          amount: 1
+      17:
+        chance: 0.01
+        diablock:
+          material: DIAMOND_BLOCK
+          amount: 1
+      18:
+        chance: 0.01
+        acaciasapling:
+          material: SAPLING
+          durability: 4
+          amount: 8
   DiamondLottery:
     type: RANDOM
     name: Try your chances at the Diamond Lottery
@@ -1440,101 +1497,101 @@ recipes:
           material: DIAMOND_PICKAXE
           durability: 350
           amount: 1
-        enchants:
-          unbreaking:
-            enchant: DURABILITY
-            level: 3
-          efficiency:
-            enchant: DIG_SPEED
-            level: 5
+#        enchants:
+#          unbreaking:
+#            enchant: DURABILITY
+#            level: 3
+#          efficiency:
+#            enchant: DIG_SPEED
+#            level: 5
       6:
         chance: 0.01
         diaAxe:
           material: DIAMOND_AXE
           durability: 350
           amount: 1
-        enchants:
-          unbreaking:
-            enchant: DURABILITY
-            level: 3
-          efficiency:
-            enchant: DIG_SPEED
-            level: 5
+#        enchants:
+#          unbreaking:
+#            enchant: DURABILITY
+#            level: 3
+#          efficiency:
+#            enchant: DIG_SPEED
+#            level: 5
       7:
         chance: 0.01
         diashovel:
           material: DIAMOND_SPADE
           durability: 350
           amount: 1
-        enchants:
-          unbreaking:
-            enchant: DURABILITY
-            level: 3
-          efficiency:
-            enchant: DIG_SPEED
-            level: 5
+#        enchants:
+#          unbreaking:
+#            enchant: DURABILITY
+#            level: 3
+#          efficiency:
+#            enchant: DIG_SPEED
+#            level: 5
       8:
         chance: 0.01
         diamondhelm:
           material: DIAMOND_HELMET
           durability: 350
           amount: 1
-        enchants:
-          unbreaking:
-            enchant: DURABILITY
-            level: 3
-          prot:
-            enchant: PROTECTION
-            level: 4
+#        enchants:
+#          unbreaking:
+#            enchant: DURABILITY
+#            level: 3
+#          prot:
+#            enchant: PROTECTION
+#            level: 4
       9:
         chance: 0.01
         diamondchest:
           material: DIAMOND_CHESTPLATE
           durability: 350
           amount: 1
-        enchants:
-          unbreaking:
-            enchant: DURABILITY
-            level: 3
-          prot:
-            enchant: PROTECTION
-            level: 4
+#        enchants:
+#          unbreaking:
+#            enchant: DURABILITY
+#            level: 3
+#          prot:
+#            enchant: PROTECTION
+#            level: 4
       10:
         chance: 0.01
         diamondlegs:
           material: DIAMOND_LEGGINGS
           durability: 350
           amount: 1
-        enchants:
-          unbreaking:
-            enchant: DURABILITY
-            level: 3
-          prot:
-            enchant: PROTECTION
-            level: 4
+#        enchants:
+#          unbreaking:
+#            enchant: DURABILITY
+#            level: 3
+#          prot:
+#            enchant: PROTECTION
+#            level: 4
       11:
         chance: 0.01
         diaBoots:
           material: DIAMOND_BOOTS
           durability: 350
           amount: 1
-        enchants:
-          unbreaking:
-            enchant: DURABILITY
-            level: 3
-          prot:
-            enchant: PROTECTION
-            level: 4
+#        enchants:
+#          unbreaking:
+#            enchant: DURABILITY
+#            level: 3
+#          prot:
+#            enchant: PROTECTION
+#            level: 4
       12:
         chance: 0.01
         diamondsword:
           material: DIAMOND_SWORD
           durability: 350
           amount: 1
-        enchants:
-          looting:
-            enchant: LOOTING
-            level: 3
+#        enchants:
+#          looting:
+#            enchant: LOOTING
+#            level: 3
       13:
         chance: 0.01
         acaciawood:
@@ -1568,172 +1625,9 @@ recipes:
           material: SAPLING
           durability: 4
           amount: 8
-  DiamondBlockLottery:
-    type: RANDOM
-    name: Try your chances at the Diamond Block Lottery
-    production_time: 5s
-    input:
-      diamondblock:
-        material: DIAMOND_BLOCK
-        amount: 1
-    outputs:
-      1:
-        chance: 0.83
-        oaklogs:
-          material: LOG
-          amount: 64
-      2:
-        chance: 0.01
-        sprucelogs:
-          material: LOG
-          durability: 1
-          amount: 64
-      3:
-        chance: 0.01
-        birchlogs:
-          material: LOG
-          durability: 2
-          amount: 64
-      4:
-        chance: 0.01
-        junglelogs:
-          material: LOG
-          durability: 3
-          amount: 64
-      5:
-        chance: 0.01
-        diapick:
-          material: DIAMOND_PICKAXE
-          durability: 350
-          amount: 1
-        enchants:
-          unbreaking:
-            enchant: DURABILITY
-            level: 3
-          efficiency:
-            enchant: DIG_SPEED
-            level: 5
-      6:
-        chance: 0.01
-        diaAxe:
-          material: DIAMOND_AXE
-          durability: 350
-          amount: 1
-        enchants:
-          unbreaking:
-            enchant: DURABILITY
-            level: 3
-          efficiency:
-            enchant: DIG_SPEED
-            level: 5
-      7:
-        chance: 0.01
-        diashovel:
-          material: DIAMOND_SPADE
-          durability: 350
-          amount: 1
-        enchants:
-          unbreaking:
-            enchant: DURABILITY
-            level: 3
-          efficiency:
-            enchant: DIG_SPEED
-            level: 5
-      8:
-        chance: 0.01
-        diamondhelm:
-          material: DIAMOND_HELMET
-          durability: 350
-          amount: 1
-        enchants:
-          unbreaking:
-            enchant: DURABILITY
-            level: 3
-          prot:
-            enchant: PROTECTION
-            level: 4
-      9:
-        chance: 0.01
-        diamondchest:
-          material: DIAMOND_CHESTPLATE
-          durability: 350
-          amount: 1
-        enchants:
-          unbreaking:
-            enchant: DURABILITY
-            level: 3
-          prot:
-            enchant: PROTECTION
-            level: 4
-      10:
-        chance: 0.01
-        diamondlegs:
-          material: DIAMOND_LEGGINGS
-          durability: 350
-          amount: 1
-        enchants:
-          unbreaking:
-            enchant: DURABILITY
-            level: 3
-          prot:
-            enchant: PROTECTION
-            level: 4
-      11:
-        chance: 0.01
-        diaBoots:
-          material: DIAMOND_BOOTS
-          durability: 350
-          amount: 1
-        enchants:
-          unbreaking:
-            enchant: DURABILITY
-            level: 3
-          prot:
-            enchant: PROTECTION
-            level: 4
-      12:
-        chance: 0.01
-        diamondsword:
-          material: DIAMOND_SWORD
-          durability: 350
-          amount: 1
-        enchants:
-          looting:
-            enchant: LOOTING
-            level: 3
-      13:
-        chance: 0.01
-        acaciawood:
-          material: LOG_2
-          durability: 0
-          amount: 64
-      14:
-        chance: 0.01
-        darkoakwood:
-          material: LOG_2
-          durability: 1
-          amount: 64
-      15:
-        chance: 0.01
-        diamond:
-          material: DIAMOND
-          amount: 1
-      16:
-        chance: 0.01
-        ironblock:
-          material: IRON_BLOCK
-          amount: 1
-      17:
-        chance: 0.01
-        diablock:
-          material: DIAMOND_BLOCK
-          amount: 1
-      18:
-        chance: 0.01
-        acaciasapling:
-          material: SAPLING
-          durability: 4
-          amount: 8
+
+# Upgrades
+
   EquipmentFac:
     name: Upgrade to Equipment factory
     production_time: 10s
@@ -1910,7 +1804,6 @@ recipes:
       wood:
         material: LOGS
         amount: 16
-        durability: -1
     factory: Production factory
   LotteryFac:
     name: Try your luck at the lottery
@@ -1933,3 +1826,13 @@ recipes:
         material: STONE
         amount: 32
     factory: Lottery factory
+
+#TODO:     
+#NBT related items (Potions, bastion chicken spawn egg)   
+#Durability of Unbreaking 4-7 items   
+#Fix lottery recipes to not spew errors   
+#HiddenOre specific drops   
+#Specific Citadel reinforcement materials   
+#Balance pass   
+#Config cleanup
+#
