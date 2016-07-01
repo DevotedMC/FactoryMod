@@ -107,6 +107,7 @@ factories:
     name: Material Synthesizer
     recipes:
     - Mix Concrete
+    - Smelt Stone
     - Accident Repair
 recipes:
   xprepair:
@@ -520,3 +521,15 @@ recipes:
             Operation: 0
             UUIDLeast: 1
             UUIDMost: 1
+  rec25:
+    type: PRODUCTION
+    name: Smelt Stone
+    production_time: 5s
+    input:
+      cobble:
+        material: COBBLESTONE
+        amount: 64
+    output:
+      stone:
+        material: STONE
+        amount: 72
