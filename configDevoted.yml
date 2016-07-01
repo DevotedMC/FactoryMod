@@ -164,9 +164,9 @@ factories:
     type: FCCUPGRADE
     name: Lottery factory
     recipes:
-    - Try your chances at the Iron Lottery
-    - Try your chances at the Emerald Lottery
-    - Try your chances at the Diamond Lottery
+    - Iron Lottery
+    - Emerald Lottery
+    - Diamond Lottery
     - Accident Repair
 
 #Recipes
@@ -1193,7 +1193,7 @@ recipes:
         amount: 640
   IronLottery:
     type: RANDOM
-    name: Try your chances at the Iron Lottery
+    name: Iron Lottery
     production_time: 5s
     input:
       iron:
@@ -1295,7 +1295,7 @@ recipes:
           amount: 1
   EmeraldLottery:
     type: RANDOM
-    name: Try your chances at the Emerald Lottery
+    name: Emerald Lottery
     production_time: 5s
     input:
       emerald:
@@ -1461,7 +1461,7 @@ recipes:
           amount: 8
   DiamondLottery:
     type: RANDOM
-    name: Try your chances at the Diamond Lottery
+    name: Diamond Lottery
     production_time: 5s
     input:
       diamond:
