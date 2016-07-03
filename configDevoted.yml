@@ -949,7 +949,7 @@ recipes:
         amount: 9
         name: Town Bastion
         lore:
-        - Prevents block placement within 19x19 area
+        - Prevents block placement within 9 radius SQUARE
         - Prevents ender pearls being thrown
   vaultBastion:
     name: Forge a Vault bastion
@@ -986,7 +986,7 @@ recipes:
         amount: 9
         name: Vault Bastion
         lore:
-        - Prevents block placement in 9 radius circle
+        - Prevents block placement in 9 radius CIRCLE
         - Prevents Ender pearls being thrown
   aoeBastion:
     name: Forge an Assault bastion
@@ -1201,7 +1201,7 @@ recipes:
         amount: 1
     outputs:
       1:
-        chance: 0.85
+        chance: 0.58
         oaklogs:
           material: LOG
           amount: 32
@@ -1209,89 +1209,232 @@ recipes:
         chance: 0.01
         sprucelogs:
           material: LOG
-          durability: 1
           amount: 32
+          durability: 1
       3:
         chance: 0.01
         birchlogs:
           material: LOG
-          durability: 2
           amount: 32
+          durability: 2
       4:
         chance: 0.01
         junglelogs:
           material: LOG
-          durability: 3
           amount: 32
+          durability: 3
       5:
         chance: 0.01
-        ironpick:
-          material: DIAMOND_PICKAXE
-          durability: 150
-          amount: 1
+        acacialogs:
+          material: LOG_2
+          amount: 32
+          durability: 0
       6:
         chance: 0.01
-        ironaxe:
-          material: DIAMOND_AXE
-          durability: 150
-          amount: 1
+        darkoaklogs:
+          material: LOG_2
+          amount: 32
+          durability: 1
       7:
         chance: 0.01
-        ironshovel:
-          material: DIAMOND_SPADE
-          durability: 150
+        chainhelm:
+          material: CHAINMAIL_HELMET
           amount: 1
+          durability: 150
       8:
         chance: 0.01
-        ironhelm:
-          material: CHAINMAIL_HELMET
-          durability: 150
+        chainchestplate:
+          material: CHAINMAIL_CHESTPLATE
           amount: 1
+          durability: 150
       9:
         chance: 0.01
-        ironchestplate:
-          material: CHAINMAIL_CHESTPLATE
-          durability: 150
+        chainleggings:
+          material: CHAINMAIL_LEGGINGS
           amount: 1
+          durability: 150
       10:
         chance: 0.01
-        ironlegs:
-          material: CHAINMAIL_LEGGINGS
-          durability: 150
+        chainboots:
+          material: CHAINMAIL_BOOTS
           amount: 1
+          durability: 150
       11:
         chance: 0.01
-        ironboots:
-          material: CHAINMAIL_BOOTS
-          durability: 150
+        diapick:
+          material: DIAMOND_PICKAXE
           amount: 1
+          durability: 150
       12:
         chance: 0.01
-        ironsword:
-          material: DIAMOND_SWORD
-          durability: 150
+        diashovel:
+          material: DIAMOND_SPADE
           amount: 1
+          durability: 150
       13:
         chance: 0.01
-        acaciawood:
-          material: LOG_2
-          durability: 0
-          amount: 32
+        diasword:
+          material: DIAMOND_SWORD
+          amount: 1
+          durability: 150
       14:
         chance: 0.01
-        darkoakwood:
-          material: LOG_2
-          durability: 1
-          amount: 32
+        diaaxe:
+          material: DIAMOND_AXE
+          amount: 1
+          durability: 150
       15:
         chance: 0.01
-        diamond:
-          material: DIAMOND
-          amount: 1
+        potato:
+          material: POTATO_ITEM
+          amount: 32
       16:
+        chance: 0.01
+        beef:
+          material: RAW_BEEF
+          amount: 32
+      17:
+        chance: 0.01
+        pork:
+          material: RAW_PORK
+          amount: 32
+      18:
+        chance: 0.01
+        carrot:
+          material: CARROT_ITEM
+          amount: 32
+      19:
+        chance: 0.01
+        chicken:
+          material: RAW_CHICKEN
+          amount: 32
+      20:
+        chance: 0.01
+        cookies:
+          material: COOKIE
+          amount: 48
+      21:
+        chance: 0.01
+        goldencarrots:
+          material: GOLDEN_CARROT
+          amount: 16
+      23:
+        chance: 0.01
+        noteblock:
+          material: NOTE_BLOCK
+          amount: 32
+      24:
+        chance: 0.01
+        oaksapling:
+          material: SAPLING
+          amount: 16
+          durability: 0
+      25:
+        chance: 0.01
+        sprucesapling:
+          material: SAPLING
+          amount: 16
+          durability: 1
+      26:
+        chance: 0.01
+        birchsapling:
+          material: SAPLING
+          amount: 16
+          durability: 2
+      27:
+        chance: 0.01
+        junglesapling:
+          material: SAPLING
+          amount: 16
+          durability: 3
+      28:
+        chance: 0.01
+        darkoaksapling:
+          material: SAPLING
+          amount: 16
+          durability: 5
+      29:
+        chance: 0.01
+        concrete:
+          material: GRAVEL
+          amount: 64
+          lore:
+          - Reinforce then let it set!
+      30:
+        chance: 0.01
+        sand:
+          material: SAND
+          amount: 32
+      31:
+        chance: 0.01
+        gravel:
+          material: GRAVEL
+          amount: 32
+      32:
+        chance: 0.01
+        glass:
+          material: GLASS
+          amount: 32
+      33:
+        chance: 0.01
+        diamondblocks:
+          material: DIAMOND_BLOCK
+          amount: 1
+      34:
+        chance: 0.01
+        diamonds:
+          material: DIAMOND
+          amount: 4
+      35:
         chance: 0.01
         ironblock:
           material: IRON_BLOCK
+          amount: 8
+      36:
+        chance: 0.01
+        iron:
+          material: IRON_INGOT
+          amount: 4
+      37:
+        chance: 0.01
+        goldblock:
+          material: GOLD_BLOCK
+          amount: 8
+      38:
+        chance: 0.01
+        gold:
+          material: GOLD_INGOT
+          amount: 4
+      39:
+        chance: 0.01
+        redstoneblocks:
+          material: REDSTONE_BLOCK
+          amount: 16
+      40:
+        chance: 0.01
+        lapisblock:
+          material: LAPIS_BLOCK
+          amount: 12
+      41:
+        chance: 0.01
+        lapis:
+          material: INK_SACK
+          amount: 8
+          durability: 4
+      42:
+        chance: 0.01
+        emeraldblock:
+          material: EMERALD_BLOCK
+          amount: 1
+      43:
+        chance: 0.01
+        emerald:
+          material: EMERALD
+          amount: 4
+      44:
+        chance: 0.01
+        jukebox:
+          material: JUKEBOX
           amount: 1
   EmeraldLottery:
     type: RANDOM
@@ -1303,7 +1446,7 @@ recipes:
         amount: 1
     outputs:
       1:
-        chance: 0.83
+        chance: 0.45
         oaklogs:
           material: LOG
           amount: 64
@@ -1311,154 +1454,380 @@ recipes:
         chance: 0.01
         sprucelogs:
           material: LOG
-          durability: 1
           amount: 64
+          durability: 1
       3:
         chance: 0.01
         birchlogs:
           material: LOG
-          durability: 2
           amount: 64
+          durability: 2
       4:
         chance: 0.01
         junglelogs:
           material: LOG
-          durability: 3
           amount: 64
+          durability: 3
       5:
+        chance: 0.01
+        acacialogs:
+          material: LOG_2
+          amount: 64
+          durability: 0
+      6:
+        chance: 0.01
+        darkoaklogs:
+          material: LOG_2
+          amount: 64
+          durability: 1
+      7:
+        chance: 0.01
+        chainhelm:
+          material: CHAINMAIL_HELMET
+          amount: 1
+          durability: 150
+      8:
+        chance: 0.01
+        chainchestplate:
+          material: CHAINMAIL_CHESTPLATE
+          amount: 1
+          durability: 150
+      9:
+        chance: 0.01
+        chainleggings:
+          material: CHAINMAIL_LEGGINGS
+          amount: 1
+          durability: 150
+      10:
+        chance: 0.01
+        chainboots:
+          material: CHAINMAIL_BOOTS
+          amount: 1
+          durability: 150
+      11:
         chance: 0.01
         diapick:
           material: DIAMOND_PICKAXE
-          durability: 350
           amount: 1
-#        enchants:
-#          unbreaking:
-#            enchant: DURABILITY
-#            level: 3
-#          efficiency:
-#            enchant: DIG_SPEED
-#            level: 5
-      6:
-        chance: 0.01
-        diaAxe:
-          material: DIAMOND_AXE
-          durability: 350
-          amount: 1
-#        enchants:
-#          unbreaking:
-#            enchant: DURABILITY
-#            level: 3
-#          efficiency:
-#            enchant: DIG_SPEED
-#            level: 5
-      7:
+          durability: 150
+      12:
         chance: 0.01
         diashovel:
           material: DIAMOND_SPADE
-          durability: 350
           amount: 1
-        enchants:
+          durability: 150
+      13:
+        chance: 0.01
+        diasword:
+          material: DIAMOND_SWORD
+          amount: 1
+          durability: 150
+      14:
+        chance: 0.01
+        diaaxe:
+          material: DIAMOND_AXE
+          amount: 1
+          durability: 150
+      15:
+        chance: 0.01
+        potato:
+          material: POTATO_ITEM
+          amount: 64
+      16:
+        chance: 0.01
+        beef:
+          material: RAW_BEEF
+          amount: 64
+      17:
+        chance: 0.01
+        pork:
+          material: RAW_PORK
+          amount: 64
+      18:
+        chance: 0.01
+        carrot:
+          material: CARROT_ITEM
+          amount: 64
+      19:
+        chance: 0.01
+        chicken:
+          material: RAW_CHICKEN
+          amount: 64
+      20:
+        chance: 0.01
+        cookies:
+          material: COOKIE
+          amount: 64
+      21:
+        chance: 0.01
+        goldencarrots:
+          material: GOLDEN_CARROT
+          amount: 32
+      23:
+        chance: 0.01
+        noteblock:
+          material: NOTE_BLOCK
+          amount: 64
+      24:
+        chance: 0.01
+        oaksapling:
+          material: SAPLING
+          amount: 32
+          durability: 0
+      25:
+        chance: 0.01
+        sprucesapling:
+          material: SAPLING
+          amount: 32
+          durability: 1
+      26:
+        chance: 0.01
+        birchsapling:
+          material: SAPLING
+          amount: 32
+          durability: 2
+      27:
+        chance: 0.01
+        junglesapling:
+          material: SAPLING
+          amount: 32
+          durability: 3
+      28:
+        chance: 0.01
+        darkoaksapling:
+          material: SAPLING
+          amount: 32
+          durability: 5
+      29:
+        chance: 0.01
+        concrete:
+          material: GRAVEL
+          amount: 96
+          lore:
+          - Reinforce then let it set!
+      30:
+        chance: 0.01
+        sand:
+          material: SAND
+          amount: 64
+      31:
+        chance: 0.01
+        gravel:
+          material: GRAVEL
+          amount: 64
+      32:
+        chance: 0.01
+        glass:
+          material: GLASS
+          amount: 64
+      33:
+        chance: 0.01
+        diamondblocks:
+          material: DIAMOND_BLOCK
+          amount: 4
+      34:
+        chance: 0.01
+        diamonds:
+          material: DIAMOND
+          amount: 16
+      35:
+        chance: 0.01
+        ironblock:
+          material: IRON_BLOCK
+          amount: 16
+      36:
+        chance: 0.01
+        iron:
+          material: IRON_INGOT
+          amount: 16
+      37:
+        chance: 0.01
+        goldblock:
+          material: GOLD_BLOCK
+          amount: 16
+      38:
+        chance: 0.01
+        gold:
+          material: GOLD_INGOT
+          amount: 16
+      39:
+        chance: 0.01
+        redstoneblocks:
+          material: REDSTONE_BLOCK
+          amount: 32
+      40:
+        chance: 0.01
+        lapisblock:
+          material: LAPIS_BLOCK
+          amount: 16
+      41:
+        chance: 0.01
+        lapis:
+          material: INK_SACK
+          amount: 16
+          durability: 4
+      42:
+        chance: 0.01
+        emeraldblock:
+          material: EMERALD_BLOCK
+          amount: 4
+      43:
+        chance: 0.01
+        emerald:
+          material: EMERALD
+          amount: 16
+      44:
+        chance: 0.01
+        jukebox:
+          material: JUKEBOX
+          amount: 8
+      45:
+        chance: 0.01
+        diahelm:
+          material: DIAMOND_HELMET
+          amount: 1
+          durability: 150
+#        enchants:
+#          unbreaking:
+#            enchant: DURABILITY
+#            level: 3
+#          prot:
+#            enchant: PROTECTION
+#            level: 4
+      46:
+        chance: 0.01
+        diachestplate:
+          material: DIAMOND_CHESTPLATE
+          amount: 1
+          durability: 150
+#        enchants:
+#          unbreaking:
+#            enchant: DURABILITY
+#            level: 3
+#          prot:
+#            enchant: PROTECTION
+#            level: 4
+      47:
+        chance: 0.01
+        dialeggings:
+          material: DIAMOND_LEGGINGS
+          amount: 1
+          durability: 150
+#        enchants:
+#          unbreaking:
+#            enchant: DURABILITY
+#            level: 3
+#          prot:
+#            enchant: PROTECTION
+#            level: 4
+      48:
+        chance: 0.01
+        diaboots:
+          material: DIAMOND_BOOTS
+          amount: 1
+          durability: 150
+#        enchants:
+#          unbreaking:
+#            enchant: DURABILITY
+#            level: 3
+#          prot:
+#            enchant: PROTECTION
+#            level: 4
+      49:
+        chance: 0.01
+        diapick:
+          material: DIAMOND_PICKAXE
+          amount: 1
+          durability: 150
+#        enchants:
 #          unbreaking:
 #            enchant: DURABILITY
 #            level: 3
 #          efficiency:
 #            enchant: DIG_SPEED
 #            level: 5
-      8:
+      50:
         chance: 0.01
-        diamondhelm:
-          material: DIAMOND_HELMET
-          durability: 350
+        diashovel:
+          material: DIAMOND_SPADE
           amount: 1
+          durability: 150
 #        enchants:
 #          unbreaking:
 #            enchant: DURABILITY
 #            level: 3
-#          prot:
-#            enchant: PROTECTION
-#            level: 4
-      9:
+#          efficiency:
+#            enchant: DIG_SPEED
+#            level: 5
+      51:
         chance: 0.01
-        diamondchest:
-          material: DIAMOND_CHESTPLATE
-          durability: 350
-          amount: 1
-#        enchants:
-#          unbreaking:
-#            enchant: DURABILITY
-#            level: 3
-#          prot:
-#            enchant: PROTECTION
-#            level: 4
-      10:
-        chance: 0.01
-        diamondlegs:
-          material: DIAMOND_LEGGINGS
-          durability: 350
-          amount: 1
-#        enchants:
-#          unbreaking:
-#            enchant: DURABILITY
-#            level: 3
-#          prot:
-#            enchant: PROTECTION
-#            level: 4
-      11:
-        chance: 0.01
-        diaBoots:
-          material: DIAMOND_BOOTS
-          durability: 350
-          amount: 1
-#        enchants:
-#          unbreaking:
-#            enchant: DURABILITY
-#            level: 3
-#          prot:
-#            enchant: PROTECTION
-#            level: 4
-      12:
-        chance: 0.01
-        diamondsword:
+        diasword:
           material: DIAMOND_SWORD
-          durability: 350
           amount: 1
+          durability: 150
 #        enchants:
 #          looting:
 #            enchant: LOOTING
 #            level: 3
-      13:
+      52:
         chance: 0.01
-        acaciawood:
-          material: LOG_2
-          durability: 0
-          amount: 64
-      14:
-        chance: 0.01
-        darkoakwood:
-          material: LOG_2
-          durability: 1
-          amount: 64
-      15:
-        chance: 0.01
-        diamond:
-          material: DIAMOND
+        diaaxe:
+          material: DIAMOND_AXE
           amount: 1
-      16:
+          durability: 150
+#        enchants:
+#          unbreaking:
+#            enchant: DURABILITY
+#            level: 3
+#          efficiency:
+#            enchant: DIG_SPEED
+#            level: 5
+      53:
         chance: 0.01
-        ironblock:
-          material: IRON_BLOCK
-          amount: 1
-      17:
+        townBastion:
+          material: SPONGE
+          amount: 4
+          name: Town Bastion
+          lore:
+          - Prevents block placement within 9 radius SQUARE
+          - Prevents ender pearls being thrown
+      54:
         chance: 0.01
-        diablock:
-          material: DIAMOND_BLOCK
-          amount: 1
-      18:
+        vaultBastion:
+          material: SPONGE
+          amount: 4
+          name: Vault Bastion
+          lore:
+          - Prevents block placement in 9 radius CIRCLE
+          - Prevents Ender pearls being thrown
+      54:
+        chance: 0.01
+        aoeBastion:
+          material: SPONGE
+          amount: 4
+          name: Assault Bastion
+          lore:
+          - Large circular area of effect
+      55:
         chance: 0.01
         acaciasapling:
           material: SAPLING
+          amount: 4
           durability: 4
-          amount: 8
+      56:
+        chance: 0.01
+        elytra:
+          material: ELYTRA
+          amount: 1
+      57:
+        chance: 0.01
+        elytra:
+          material: ELYTRA
+          amount: 1
+#        enchants:
+#          unbreaking:
+#            enchant: DURABILITY
+#            level: 3
   DiamondLottery:
     type: RANDOM
     name: Diamond Lottery
@@ -1469,60 +1838,299 @@ recipes:
         amount: 1
     outputs:
       1:
-        chance: 0.83
+        chance: 0.31
         oaklogs:
           material: LOG
-          amount: 64
+          amount: 96
       2:
         chance: 0.01
         sprucelogs:
           material: LOG
+          amount: 96
           durability: 1
-          amount: 64
       3:
         chance: 0.01
         birchlogs:
           material: LOG
+          amount: 96
           durability: 2
-          amount: 64
       4:
         chance: 0.01
         junglelogs:
           material: LOG
+          amount: 96
           durability: 3
-          amount: 64
       5:
+        chance: 0.01
+        acacialogs:
+          material: LOG_2
+          amount: 96
+          durability: 0
+      6:
+        chance: 0.01
+        darkoaklogs:
+          material: LOG_2
+          amount: 96
+          durability: 1
+      7:
+        chance: 0.01
+        chainhelm:
+          material: CHAINMAIL_HELMET
+          amount: 1
+          durability: 150
+      8:
+        chance: 0.01
+        chainchestplate:
+          material: CHAINMAIL_CHESTPLATE
+          amount: 1
+          durability: 150
+      9:
+        chance: 0.01
+        chainleggings:
+          material: CHAINMAIL_LEGGINGS
+          amount: 1
+          durability: 150
+      10:
+        chance: 0.01
+        chainboots:
+          material: CHAINMAIL_BOOTS
+          amount: 1
+          durability: 150
+      11:
         chance: 0.01
         diapick:
           material: DIAMOND_PICKAXE
-          durability: 350
           amount: 1
-#        enchants:
-#          unbreaking:
-#            enchant: DURABILITY
-#            level: 3
-#          efficiency:
-#            enchant: DIG_SPEED
-#            level: 5
-      6:
-        chance: 0.01
-        diaAxe:
-          material: DIAMOND_AXE
-          durability: 350
-          amount: 1
-#        enchants:
-#          unbreaking:
-#            enchant: DURABILITY
-#            level: 3
-#          efficiency:
-#            enchant: DIG_SPEED
-#            level: 5
-      7:
+          durability: 150
+      12:
         chance: 0.01
         diashovel:
           material: DIAMOND_SPADE
-          durability: 350
           amount: 1
+          durability: 150
+      13:
+        chance: 0.01
+        diasword:
+          material: DIAMOND_SWORD
+          amount: 1
+          durability: 150
+      14:
+        chance: 0.01
+        diaaxe:
+          material: DIAMOND_AXE
+          amount: 1
+          durability: 150
+      15:
+        chance: 0.01
+        potato:
+          material: POTATO_ITEM
+          amount: 96
+      16:
+        chance: 0.01
+        beef:
+          material: RAW_BEEF
+          amount: 96
+      17:
+        chance: 0.01
+        pork:
+          material: RAW_PORK
+          amount: 96
+      18:
+        chance: 0.01
+        carrot:
+          material: CARROT_ITEM
+          amount: 96
+      19:
+        chance: 0.01
+        chicken:
+          material: RAW_CHICKEN
+          amount: 96
+      20:
+        chance: 0.01
+        cookies:
+          material: COOKIE
+          amount: 128
+      21:
+        chance: 0.01
+        goldencarrots:
+          material: GOLDEN_CARROT
+          amount: 64
+      23:
+        chance: 0.01
+        noteblock:
+          material: NOTE_BLOCK
+          amount: 128
+      24:
+        chance: 0.01
+        oaksapling:
+          material: SAPLING
+          amount: 64
+          durability: 0
+      25:
+        chance: 0.01
+        sprucesapling:
+          material: SAPLING
+          amount: 64
+          durability: 1
+      26:
+        chance: 0.01
+        birchsapling:
+          material: SAPLING
+          amount: 64
+          durability: 2
+      27:
+        chance: 0.01
+        junglesapling:
+          material: SAPLING
+          amount: 64
+          durability: 3
+      28:
+        chance: 0.01
+        darkoaksapling:
+          material: SAPLING
+          amount: 64
+          durability: 5
+      29:
+        chance: 0.01
+        concrete:
+          material: GRAVEL
+          amount: 128
+          lore:
+          - Reinforce then let it set!
+      30:
+        chance: 0.01
+        sand:
+          material: SAND
+          amount: 128
+      31:
+        chance: 0.01
+        gravel:
+          material: GRAVEL
+          amount: 128
+      32:
+        chance: 0.01
+        glass:
+          material: GLASS
+          amount: 128
+      33:
+        chance: 0.01
+        diamondblocks:
+          material: DIAMOND_BLOCK
+          amount: 8
+      34:
+        chance: 0.01
+        diamonds:
+          material: DIAMOND
+          amount: 32
+      35:
+        chance: 0.01
+        ironblock:
+          material: IRON_BLOCK
+          amount: 32
+      36:
+        chance: 0.01
+        iron:
+          material: IRON_INGOT
+          amount: 32
+      37:
+        chance: 0.01
+        goldblock:
+          material: GOLD_BLOCK
+          amount: 32
+      38:
+        chance: 0.01
+        gold:
+          material: GOLD_INGOT
+          amount: 32
+      39:
+        chance: 0.01
+        redstoneblocks:
+          material: REDSTONE_BLOCK
+          amount: 64
+      40:
+        chance: 0.01
+        lapisblock:
+          material: LAPIS_BLOCK
+          amount: 32
+      41:
+        chance: 0.01
+        lapis:
+          material: INK_SACK
+          amount: 32
+          durability: 4
+      42:
+        chance: 0.01
+        emeraldblock:
+          material: EMERALD_BLOCK
+          amount: 8
+      43:
+        chance: 0.01
+        emerald:
+          material: EMERALD
+          amount: 32
+      44:
+        chance: 0.01
+        jukebox:
+          material: JUKEBOX
+          amount: 16
+      45:
+        chance: 0.01
+        diahelm:
+          material: DIAMOND_HELMET
+          amount: 1
+          durability: 150
+#        enchants:
+#          unbreaking:
+#            enchant: DURABILITY
+#            level: 3
+#          prot:
+#            enchant: PROTECTION
+#            level: 4
+      46:
+        chance: 0.01
+        diachestplate:
+          material: DIAMOND_CHESTPLATE
+          amount: 1
+          durability: 150
+#        enchants:
+#          unbreaking:
+#            enchant: DURABILITY
+#            level: 3
+#          prot:
+#            enchant: PROTECTION
+#            level: 4
+      47:
+        chance: 0.01
+        dialeggings:
+          material: DIAMOND_LEGGINGS
+          amount: 1
+          durability: 150
+#        enchants:
+#          unbreaking:
+#            enchant: DURABILITY
+#            level: 3
+#          prot:
+#            enchant: PROTECTION
+#            level: 4
+      48:
+        chance: 0.01
+        diaboots:
+          material: DIAMOND_BOOTS
+          amount: 1
+          durability: 150
+#        enchants:
+#          unbreaking:
+#            enchant: DURABILITY
+#            level: 3
+#          prot:
+#            enchant: PROTECTION
+#            level: 4
+      49:
+        chance: 0.01
+        diapick:
+          material: DIAMOND_PICKAXE
+          amount: 1
+          durability: 150
 #        enchants:
 #          unbreaking:
 #            enchant: DURABILITY
@@ -1530,101 +2138,250 @@ recipes:
 #          efficiency:
 #            enchant: DIG_SPEED
 #            level: 5
-      8:
+      50:
         chance: 0.01
-        diamondhelm:
-          material: DIAMOND_HELMET
-          durability: 350
+        diashovel:
+          material: DIAMOND_SPADE
           amount: 1
+          durability: 150
 #        enchants:
 #          unbreaking:
 #            enchant: DURABILITY
 #            level: 3
-#          prot:
-#            enchant: PROTECTION
-#            level: 4
-      9:
+#          efficiency:
+#            enchant: DIG_SPEED
+#            level: 5
+      51:
         chance: 0.01
-        diamondchest:
-          material: DIAMOND_CHESTPLATE
-          durability: 350
-          amount: 1
-#        enchants:
-#          unbreaking:
-#            enchant: DURABILITY
-#            level: 3
-#          prot:
-#            enchant: PROTECTION
-#            level: 4
-      10:
-        chance: 0.01
-        diamondlegs:
-          material: DIAMOND_LEGGINGS
-          durability: 350
-          amount: 1
-#        enchants:
-#          unbreaking:
-#            enchant: DURABILITY
-#            level: 3
-#          prot:
-#            enchant: PROTECTION
-#            level: 4
-      11:
-        chance: 0.01
-        diaBoots:
-          material: DIAMOND_BOOTS
-          durability: 350
-          amount: 1
-#        enchants:
-#          unbreaking:
-#            enchant: DURABILITY
-#            level: 3
-#          prot:
-#            enchant: PROTECTION
-#            level: 4
-      12:
-        chance: 0.01
-        diamondsword:
+        diasword:
           material: DIAMOND_SWORD
-          durability: 350
           amount: 1
+          durability: 150
 #        enchants:
 #          looting:
 #            enchant: LOOTING
 #            level: 3
-      13:
+      52:
         chance: 0.01
-        acaciawood:
-          material: LOG_2
-          durability: 0
-          amount: 64
-      14:
-        chance: 0.01
-        darkoakwood:
-          material: LOG_2
-          durability: 1
-          amount: 64
-      15:
-        chance: 0.01
-        diamond:
-          material: DIAMOND
+        diaaxe:
+          material: DIAMOND_AXE
           amount: 1
-      16:
+          durability: 150
+#        enchants:
+#          unbreaking:
+#            enchant: DURABILITY
+#            level: 3
+#          efficiency:
+#            enchant: DIG_SPEED
+#            level: 5
+      53:
         chance: 0.01
-        ironblock:
-          material: IRON_BLOCK
-          amount: 1
-      17:
+        townBastion:
+          material: SPONGE
+          amount: 16
+          name: Town Bastion
+          lore:
+          - Prevents block placement within 9 radius SQUARE
+          - Prevents ender pearls being thrown
+      54:
         chance: 0.01
-        diablock:
-          material: DIAMOND_BLOCK
-          amount: 1
-      18:
+        vaultBastion:
+          material: SPONGE
+          amount: 16
+          name: Vault Bastion
+          lore:
+          - Prevents block placement in 9 radius CIRCLE
+          - Prevents Ender pearls being thrown
+      54:
+        chance: 0.01
+        aoeBastion:
+          material: SPONGE
+          amount: 16
+          name: Assault Bastion
+          lore:
+          - Large circular area of effect
+      55:
         chance: 0.01
         acaciasapling:
           material: SAPLING
-          durability: 4
           amount: 8
+          durability: 4
+      56:
+        chance: 0.01
+        elytra:
+          material: ELYTRA
+          amount: 1
+      57:
+        chance: 0.01
+        elytra:
+          material: ELYTRA
+          amount: 1
+#        enchants:
+#          unbreaking:
+#            enchant: DURABILITY
+#            level: 3
+      58:
+        chance: 0.01
+        elytra:
+          material: ELYTRA
+          amount: 1
+#        enchants:
+#          mending:
+#            enchant: MENDING
+#            level: 1
+      59:
+        chance: 0.01
+        elytra:
+          material: ELYTRA
+          amount: 1
+#        enchants:
+#          unbreaking:
+#            enchant: DURABILITY
+#            level: 3
+#          mending:
+#            enchant: MENDING
+#            level: 1
+      60:
+        chance: 0.01
+        diahelm:
+          material: DIAMOND_HELMET
+          amount: 1
+          durability: 150
+#        enchants:
+#          unbreaking:
+#            enchant: DURABILITY
+#            level: 4
+#          prot:
+#            enchant: PROTECTION
+#            level: 4
+      61:
+        chance: 0.01
+        diachestplate:
+          material: DIAMOND_CHESTPLATE
+          amount: 1
+          durability: 150
+#        enchants:
+#          unbreaking:
+#            enchant: DURABILITY
+#            level: 4
+#          prot:
+#            enchant: PROTECTION
+#            level: 4
+      62:
+        chance: 0.01
+        dialeggings:
+          material: DIAMOND_LEGGINGS
+          amount: 1
+          durability: 150
+#        enchants:
+#          unbreaking:
+#            enchant: DURABILITY
+#            level: 4
+#          prot:
+#            enchant: PROTECTION
+#            level: 4
+      63:
+        chance: 0.01
+        diaboots:
+          material: DIAMOND_BOOTS
+          amount: 1
+          durability: 150
+#        enchants:
+#          unbreaking:
+#            enchant: DURABILITY
+#            level: 4
+#          prot:
+#            enchant: PROTECTION
+#            level: 4
+      64:
+        chance: 0.01
+        diapick:
+          material: DIAMOND_PICKAXE
+          amount: 1
+          durability: 150
+#        enchants:
+#          unbreaking:
+#            enchant: DURABILITY
+#            level: 4
+#          efficiency:
+#            enchant: DIG_SPEED
+#            level: 6
+      65:
+        chance: 0.01
+        diashovel:
+          material: DIAMOND_SPADE
+          amount: 1
+          durability: 150
+#        enchants:
+#          unbreaking:
+#            enchant: DURABILITY
+#            level: 4
+#          efficiency:
+#            enchant: DIG_SPEED
+#            level: 6
+      66:
+        chance: 0.01
+        diasword:
+          material: DIAMOND_SWORD
+          amount: 1
+          durability: 150
+#        enchants:
+#          looting:
+#            enchant: LOOTING
+#            level: 4
+      67:
+        chance: 0.01
+        diaaxe:
+          material: DIAMOND_AXE
+          amount: 1
+          durability: 150
+#        enchants:
+#          unbreaking:
+#            enchant: DURABILITY
+#            level: 4
+#          efficiency:
+#            enchant: DIG_SPEED
+#            level: 6
+      68:
+        chance: 0.01
+        chainhelm:
+          material: CHAINMAIL_HELMET
+          amount: 1
+          durability: 150
+#        enchants:
+#          unbreaking:
+#            enchant: DURABILITY
+#            level: 4
+      69:
+        chance: 0.01
+        chainchestplate:
+          material: CHAINMAIL_CHESTPLATE
+          amount: 1
+          durability: 150
+#        enchants:
+#          unbreaking:
+#            enchant: DURABILITY
+#            level: 4
+      70:
+        chance: 0.01
+        chainleggings:
+          material: CHAINMAIL_LEGGINGS
+          amount: 1
+          durability: 150
+#        enchants:
+#          unbreaking:
+#            enchant: DURABILITY
+#            level: 4
+      71:
+        chance: 0.01
+        chainboots:
+          material: CHAINMAIL_BOOTS
+          amount: 1
+          durability: 150
+#        enchants:
+#          unbreaking:
+#            enchant: DURABILITY
+#            level: 4
 
 # Upgrades
 
