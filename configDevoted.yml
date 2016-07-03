@@ -1201,7 +1201,7 @@ recipes:
         amount: 1
     outputs:
       1:
-        chance: 0.58
+        chance: 0.55
         oaklogs:
           material: LOG
           amount: 32
@@ -1296,7 +1296,7 @@ recipes:
       17:
         chance: 0.01
         pork:
-          material: RAW_PORK
+          material: PORK
           amount: 32
       18:
         chance: 0.01
@@ -1446,7 +1446,7 @@ recipes:
         amount: 1
     outputs:
       1:
-        chance: 0.45
+        chance: 0.34
         oaklogs:
           material: LOG
           amount: 64
@@ -1541,7 +1541,7 @@ recipes:
       17:
         chance: 0.01
         pork:
-          material: RAW_PORK
+          material: PORK
           amount: 64
       18:
         chance: 0.01
@@ -1687,101 +1687,101 @@ recipes:
           material: DIAMOND_HELMET
           amount: 1
           durability: 150
-#        enchants:
-#          unbreaking:
-#            enchant: DURABILITY
-#            level: 3
-#          prot:
-#            enchant: PROTECTION
-#            level: 4
+          enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 3
+          prot:
+            enchant: PROTECTION
+            level: 4
       46:
         chance: 0.01
         diachestplate:
           material: DIAMOND_CHESTPLATE
           amount: 1
           durability: 150
-#        enchants:
-#          unbreaking:
-#            enchant: DURABILITY
-#            level: 3
-#          prot:
-#            enchant: PROTECTION
-#            level: 4
+          enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 3
+          prot:
+            enchant: PROTECTION
+            level: 4
       47:
         chance: 0.01
         dialeggings:
           material: DIAMOND_LEGGINGS
           amount: 1
           durability: 150
-#        enchants:
-#          unbreaking:
-#            enchant: DURABILITY
-#            level: 3
-#          prot:
-#            enchant: PROTECTION
-#            level: 4
+          enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 3
+          prot:
+            enchant: PROTECTION
+            level: 4
       48:
         chance: 0.01
         diaboots:
           material: DIAMOND_BOOTS
           amount: 1
           durability: 150
-#        enchants:
-#          unbreaking:
-#            enchant: DURABILITY
-#            level: 3
-#          prot:
-#            enchant: PROTECTION
-#            level: 4
+          enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 3
+          prot:
+            enchant: PROTECTION
+            level: 4
       49:
         chance: 0.01
         diapick:
           material: DIAMOND_PICKAXE
           amount: 1
           durability: 150
-#        enchants:
-#          unbreaking:
-#            enchant: DURABILITY
-#            level: 3
-#          efficiency:
-#            enchant: DIG_SPEED
-#            level: 5
+          enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 3
+          efficiency:
+            enchant: DIG_SPEED
+            level: 5
       50:
         chance: 0.01
         diashovel:
           material: DIAMOND_SPADE
           amount: 1
           durability: 150
-#        enchants:
-#          unbreaking:
-#            enchant: DURABILITY
-#            level: 3
-#          efficiency:
-#            enchant: DIG_SPEED
-#            level: 5
+          enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 3
+          efficiency:
+            enchant: DIG_SPEED
+            level: 5
       51:
         chance: 0.01
         diasword:
           material: DIAMOND_SWORD
           amount: 1
           durability: 150
-#        enchants:
-#          looting:
-#            enchant: LOOTING
-#            level: 3
+          enchants:
+          looting:
+            enchant: LOOTING
+            level: 3
       52:
         chance: 0.01
         diaaxe:
           material: DIAMOND_AXE
           amount: 1
           durability: 150
-#        enchants:
-#          unbreaking:
-#            enchant: DURABILITY
-#            level: 3
-#          efficiency:
-#            enchant: DIG_SPEED
-#            level: 5
+          enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 3
+          efficiency:
+            enchant: DIG_SPEED
+            level: 5
       53:
         chance: 0.01
         townBastion:
@@ -1824,10 +1824,10 @@ recipes:
         elytra:
           material: ELYTRA
           amount: 1
-#        enchants:
-#          unbreaking:
-#            enchant: DURABILITY
-#            level: 3
+          enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 3
   DiamondLottery:
     type: RANDOM
     name: Diamond Lottery
@@ -1838,7 +1838,7 @@ recipes:
         amount: 1
     outputs:
       1:
-        chance: 0.31
+        chance: 0.3
         oaklogs:
           material: LOG
           amount: 96
@@ -1933,7 +1933,7 @@ recipes:
       17:
         chance: 0.01
         pork:
-          material: RAW_PORK
+          material: PORK
           amount: 96
       18:
         chance: 0.01
@@ -2079,101 +2079,101 @@ recipes:
           material: DIAMOND_HELMET
           amount: 1
           durability: 150
-#        enchants:
-#          unbreaking:
-#            enchant: DURABILITY
-#            level: 3
-#          prot:
-#            enchant: PROTECTION
-#            level: 4
+          enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 3
+          prot:
+            enchant: PROTECTION
+            level: 4
       46:
         chance: 0.01
         diachestplate:
           material: DIAMOND_CHESTPLATE
           amount: 1
           durability: 150
-#        enchants:
-#          unbreaking:
-#            enchant: DURABILITY
-#            level: 3
-#          prot:
-#            enchant: PROTECTION
-#            level: 4
+          enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 3
+          prot:
+            enchant: PROTECTION
+            level: 4
       47:
         chance: 0.01
         dialeggings:
           material: DIAMOND_LEGGINGS
           amount: 1
           durability: 150
-#        enchants:
-#          unbreaking:
-#            enchant: DURABILITY
-#            level: 3
-#          prot:
-#            enchant: PROTECTION
-#            level: 4
+          enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 3
+          prot:
+            enchant: PROTECTION
+            level: 4
       48:
         chance: 0.01
         diaboots:
           material: DIAMOND_BOOTS
           amount: 1
           durability: 150
-#        enchants:
-#          unbreaking:
-#            enchant: DURABILITY
-#            level: 3
-#          prot:
-#            enchant: PROTECTION
-#            level: 4
+          enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 3
+          prot:
+            enchant: PROTECTION
+            level: 4
       49:
         chance: 0.01
         diapick:
           material: DIAMOND_PICKAXE
           amount: 1
           durability: 150
-#        enchants:
-#          unbreaking:
-#            enchant: DURABILITY
-#            level: 3
-#          efficiency:
-#            enchant: DIG_SPEED
-#            level: 5
+          enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 3
+          efficiency:
+            enchant: DIG_SPEED
+            level: 5
       50:
         chance: 0.01
         diashovel:
           material: DIAMOND_SPADE
           amount: 1
           durability: 150
-#        enchants:
-#          unbreaking:
-#            enchant: DURABILITY
-#            level: 3
-#          efficiency:
-#            enchant: DIG_SPEED
-#            level: 5
+          enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 3
+          efficiency:
+            enchant: DIG_SPEED
+            level: 5
       51:
         chance: 0.01
         diasword:
           material: DIAMOND_SWORD
           amount: 1
           durability: 150
-#        enchants:
-#          looting:
-#            enchant: LOOTING
-#            level: 3
+          enchants:
+          looting:
+            enchant: LOOTING
+            level: 3
       52:
         chance: 0.01
         diaaxe:
           material: DIAMOND_AXE
           amount: 1
           durability: 150
-#        enchants:
-#          unbreaking:
-#            enchant: DURABILITY
-#            level: 3
-#          efficiency:
-#            enchant: DIG_SPEED
-#            level: 5
+          enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 3
+          efficiency:
+            enchant: DIG_SPEED
+            level: 5
       53:
         chance: 0.01
         townBastion:
@@ -2216,172 +2216,172 @@ recipes:
         elytra:
           material: ELYTRA
           amount: 1
-#        enchants:
-#          unbreaking:
-#            enchant: DURABILITY
-#            level: 3
+          enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 3
       58:
         chance: 0.01
         elytra:
           material: ELYTRA
           amount: 1
-#        enchants:
-#          mending:
-#            enchant: MENDING
-#            level: 1
+          enchants:
+          mending:
+            enchant: MENDING
+            level: 1
       59:
         chance: 0.01
         elytra:
           material: ELYTRA
           amount: 1
-#        enchants:
-#          unbreaking:
-#            enchant: DURABILITY
-#            level: 3
-#          mending:
-#            enchant: MENDING
-#            level: 1
+          enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 3
+          mending:
+            enchant: MENDING
+            level: 1
       60:
         chance: 0.01
         diahelm:
           material: DIAMOND_HELMET
           amount: 1
           durability: 150
-#        enchants:
-#          unbreaking:
-#            enchant: DURABILITY
-#            level: 4
-#          prot:
-#            enchant: PROTECTION
-#            level: 4
+          enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 4
+          prot:
+            enchant: PROTECTION
+            level: 4
       61:
         chance: 0.01
         diachestplate:
           material: DIAMOND_CHESTPLATE
           amount: 1
           durability: 150
-#        enchants:
-#          unbreaking:
-#            enchant: DURABILITY
-#            level: 4
-#          prot:
-#            enchant: PROTECTION
-#            level: 4
+          enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 4
+          prot:
+            enchant: PROTECTION
+            level: 4
       62:
         chance: 0.01
         dialeggings:
           material: DIAMOND_LEGGINGS
           amount: 1
           durability: 150
-#        enchants:
-#          unbreaking:
-#            enchant: DURABILITY
-#            level: 4
-#          prot:
-#            enchant: PROTECTION
-#            level: 4
+          enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 4
+          prot:
+            enchant: PROTECTION
+            level: 4
       63:
         chance: 0.01
         diaboots:
           material: DIAMOND_BOOTS
           amount: 1
           durability: 150
-#        enchants:
-#          unbreaking:
-#            enchant: DURABILITY
-#            level: 4
-#          prot:
-#            enchant: PROTECTION
-#            level: 4
+          enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 4
+          prot:
+            enchant: PROTECTION
+            level: 4
       64:
         chance: 0.01
         diapick:
           material: DIAMOND_PICKAXE
           amount: 1
           durability: 150
-#        enchants:
-#          unbreaking:
-#            enchant: DURABILITY
-#            level: 4
-#          efficiency:
-#            enchant: DIG_SPEED
-#            level: 6
+          enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 4
+          efficiency:
+            enchant: DIG_SPEED
+            level: 6
       65:
         chance: 0.01
         diashovel:
           material: DIAMOND_SPADE
           amount: 1
           durability: 150
-#        enchants:
-#          unbreaking:
-#            enchant: DURABILITY
-#            level: 4
-#          efficiency:
-#            enchant: DIG_SPEED
-#            level: 6
+          enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 4
+          efficiency:
+            enchant: DIG_SPEED
+            level: 6
       66:
         chance: 0.01
         diasword:
           material: DIAMOND_SWORD
           amount: 1
           durability: 150
-#        enchants:
-#          looting:
-#            enchant: LOOTING
-#            level: 4
+          enchants:
+          looting:
+            enchant: LOOTING
+            level: 4
       67:
         chance: 0.01
         diaaxe:
           material: DIAMOND_AXE
           amount: 1
           durability: 150
-#        enchants:
-#          unbreaking:
-#            enchant: DURABILITY
-#            level: 4
-#          efficiency:
-#            enchant: DIG_SPEED
-#            level: 6
+          enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 4
+          efficiency:
+            enchant: DIG_SPEED
+            level: 6
       68:
         chance: 0.01
         chainhelm:
           material: CHAINMAIL_HELMET
           amount: 1
           durability: 150
-#        enchants:
-#          unbreaking:
-#            enchant: DURABILITY
-#            level: 4
+          enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 4
       69:
         chance: 0.01
         chainchestplate:
           material: CHAINMAIL_CHESTPLATE
           amount: 1
           durability: 150
-#        enchants:
-#          unbreaking:
-#            enchant: DURABILITY
-#            level: 4
+          enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 4
       70:
         chance: 0.01
         chainleggings:
           material: CHAINMAIL_LEGGINGS
           amount: 1
           durability: 150
-#        enchants:
-#          unbreaking:
-#            enchant: DURABILITY
-#            level: 4
+          enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 4
       71:
         chance: 0.01
         chainboots:
           material: CHAINMAIL_BOOTS
           amount: 1
           durability: 150
-#        enchants:
-#          unbreaking:
-#            enchant: DURABILITY
-#            level: 4
+          enchants:
+          unbreaking:
+            enchant: DURABILITY
+            level: 4
 
 # Upgrades
 
