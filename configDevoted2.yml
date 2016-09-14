@@ -1,0 +1,303 @@
+# 
+#   inputmat1:
+#       material: STONE
+#   inputmat345FF:
+#       material: DIRT
+
+default_fuel:
+  magic:
+    material: EXP_BOTTLE
+    amount: 1
+default_fuel_consumption_intervall: 2s
+default_menu_factory: Workshop
+default_return_rate: 0.5
+break_grace_period: 100d
+decay_intervall: 1h
+decay_amount: 0
+disable_nether: false
+default_update_time: 1s
+use_recipe_yamlidentifiers: false
+log_inventories: true
+factories:
+  workshop:
+    type: FCC
+    name: Workshop
+    setupcost:
+      stonepick:
+        material: STONE_PICKAXE
+        amount: 1
+    recipes:
+    - Upgrade to Smelter
+    - Upgrade to First Vault Factory
+    - Upgrade to Second Vault Factory
+    - Upgrade to Third Vault Factory
+    - Upgrade to First Pickaxe Factory
+    - Upgrade to Second Pickaxe Factory
+    - Upgrade to Third Pickaxe Factory
+    - Upgrade to Potion Factory
+    - Upgrade to Lottery Factory
+    - Accident Repair
+  Smelter:
+    type: FCCUPGRADE
+    name: Smelter
+    recipes:
+    - Craft U4E6 Pickaxe
+    - Accident Repair
+  Vault_Factory_1:
+    type: FCCUPGRADE
+    name: Vault Factory 1
+    recipes:
+    - Stone Obsidian
+    - Iron Obsidian
+    - Iron Door
+    - City Bastion
+    - Accident Repair
+  Vault_Factory_2:
+    type: FCCUPGRADE
+    name: Vault Factory 2
+    recipes:
+    - Stone Obsidian
+    - Iron Obsidian
+    - Diamond Obsidian
+    - Iron Door
+    - Diamond Door
+    - Diamond Chest
+    - Diamond Spike
+    - City Bastion
+    - Accident Repair
+  Vault_Factory_3:
+    type: FCCUPGRADE
+    name: Vault Factory 3
+    recipes:
+    - Stone Obsidian
+    - Iron Obsidian
+    - Diamond Obsidian
+    - Emerald Obsidian
+    - Iron Door
+    - Diamond Door
+    - Emerald Door
+    - Diamond Chest
+    - Emerald Chest
+    - Diamond Spike
+    - Emerald Spike
+    - City Bastion
+    - Vault Bastion
+    - Accident Repair
+  Pickaxe_Factory_1:
+    type: FCCUPGRADE
+    name: Pickaxe Factory 1
+    recipes:
+    - Unbreaking IV Book
+    - Efficiency VI Pickaxe
+    - Accident Repair
+  Pickaxe_Factory_2:
+    type: FCCUPGRADE
+    name: Pickaxe Factory 2
+    recipes:
+    - Unbreaking IV Book
+    - Unbreaking V Book
+    - Efficiency VI Pickaxe
+    - Efficiency VII Pickaxe
+    - Accident Repair
+  Pickaxe_Factory_3:
+    type: FCCUPGRADE
+    name: Pickaxe Factory 3
+    recipes:
+    - Unbreaking IV Book
+    - Unbreaking V Book
+    - Unbreaking VI Book
+    - Efficiency VI Pickaxe
+    - Efficiency VII Pickaxe
+    - Efficiency VIII Pickaxe
+    - Efficiency VI Axe
+    - Accident Repair
+  Potion_Factory:
+    type: FCCUPGRADE
+    name: Potion Factory
+    recipes:
+    - Iron Lottery
+    - Accident Repair
+  Lottery_Factory:
+    type: FCCUPGRADE
+    name: Lottery_Factory
+    recipes:
+    - Play the Lottery
+    - Accident Repair
+
+#Recipes
+
+recipes:
+  repair:
+    name: Accident Repair
+    production_time: 1s
+    type: REPAIR
+    input:
+      xp_bottles:
+        material: EXP_BOTTLE
+        amount: 10
+    health_gained: 10000
+  mixConcrete:
+    type: PRODUCTION
+    name: Mix Concrete
+    production_time: 10s
+    input:
+      stone:
+        material: STONE
+        durability: -1
+        amount: 64
+      gravel:
+        material: GRAVEL
+        amount: 64
+      sand:
+        material: SAND
+        amount: 64
+    output:
+      concrete:
+        material: GRAVEL
+        amount: 64
+        lore:
+        - Reinforce then let it set!
+
+# Upgrades
+
+  Smelter_Upgrade:
+    name: Upgrade to Smelter
+    production_time: 10s
+    type: UPGRADE
+    input:
+      stone:
+        material: STONE
+        amount: 64
+      furnace:
+        material: FURNACE
+        amount: 8
+      coalore:
+        material: COAL_ORE
+        amount: 8
+    factory: Smelter
+  Vault_Upgrade_1:
+    name: Upgrade to First Vault Factory
+    production_time: 10s
+    type: UPGRADE
+    input:
+      lead:
+        material: COAL
+        amount: 196
+        lore:
+        - Lead T1
+      steel:
+        material: IRON_INGOT
+        amount: 128
+        lore:
+        - Steel T1
+      bronze:
+        material: INK_SACK
+        amount: 64
+        durability: 14
+        lore:
+        - Bronze T1
+      silver:
+        material: IRON_INGOT
+        amount: 64
+        lore:
+        - Silver T1
+      copper:
+        material: REDSTONE
+        amount: 64
+        lore:
+        - Copper T1
+      titanium:
+        material: DIAMOND
+        amount: 64
+        lore:
+        - Titanium T1
+      mercury:
+        material: EMERALD
+        amount: 64
+        lore:
+        - Mercury T1
+    factory: Vault Factory 1
+  Vault_Upgrade_2:
+    name: Upgrade to Second Vault Factory
+    production_time: 10s
+    type: UPGRADE
+    input:
+      nickel:
+        material: COAL
+        amount: 384
+        lore:
+        - Nickel T2
+      aluminum:
+        material: IRON_INGOT
+        amount: 256
+        lore:
+        - Aluminum T2
+      pewter:
+        material: INK_SACK
+        amount: 128
+        durability: 8
+        lore:
+        - Pewter T2
+      pearl:
+        material: EYE_OF_ENDER
+        amount: 128
+        lore:
+        - Pearl T2
+      brass:
+        material: REDSTONE
+        amount: 128
+        lore:
+        - Brass T2
+      platinum:
+        material: DIAMOND
+        amount: 128
+        lore:
+        - Platinum T2
+      enderite:
+        material: EMERALD
+        amount: 128
+        lore:
+        - Enderite T2
+    factory: Vault Factory 2
+  Vault_Upgrade_3:
+    name: Upgrade to Third Vault Factory
+    production_time: 10s
+    type: UPGRADE
+    input:
+      oil:
+        material: COAL
+        amount: 384
+        lore:
+        - Oil T3
+      silicon:
+        material: IRON_INGOT
+        amount: 256
+        lore:
+        - Silicon T3
+      fiberglass:
+        material: INK_SACK
+        amount: 128
+        durability: 5
+        lore:
+        - Fiberglass T3
+      artifact:
+        material: EYE_OF_ENDER
+        amount: 128
+        lore:
+        - Artifact T3
+      graphite:
+        material: REDSTONE
+        amount: 128
+        lore:
+        - Graphite T3
+      carbon:
+        material: DIAMOND
+        amount: 128
+        lore:
+        - Carbon T3
+      uranium:
+        material: EMERALD
+        amount: 128
+        lore:
+        - Uranium T3
+    factory: Vault Factory 3
