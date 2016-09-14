@@ -29,11 +29,7 @@ factories:
     recipes:
     - Upgrade to Smelter
     - Upgrade to First Vault Factory
-    - Upgrade to Second Vault Factory
-    - Upgrade to Third Vault Factory
     - Upgrade to First Pickaxe Factory
-    - Upgrade to Second Pickaxe Factory
-    - Upgrade to Third Pickaxe Factory
     - Upgrade to Potion Factory
     - Upgrade to Lottery Factory
     - Accident Repair
@@ -51,6 +47,7 @@ factories:
     - Iron Obsidian
     - Iron Door
     - City Bastion
+    - Upgrade to Second Vault Factory
     - Accident Repair
   Vault_Factory_2:
     type: FCCUPGRADE
@@ -64,6 +61,7 @@ factories:
     - Diamond Chest
     - Diamond Spike
     - City Bastion
+    - Upgrade to Third Vault Factory
     - Accident Repair
   Vault_Factory_3:
     type: FCCUPGRADE
@@ -89,6 +87,7 @@ factories:
     recipes:
     - Unbreaking IV Book
     - Efficiency VI Pickaxe
+    - Upgrade to Second Pickaxe Factory
     - Accident Repair
   Pickaxe_Factory_2:
     type: FCCUPGRADE
@@ -98,6 +97,7 @@ factories:
     - Unbreaking V Book
     - Efficiency VI Pickaxe
     - Efficiency VII Pickaxe
+    - Upgrade to Third Pickaxe Factory
     - Accident Repair
   Pickaxe_Factory_3:
     type: FCCUPGRADE
@@ -301,3 +301,168 @@ recipes:
         lore:
         - Uranium T3
     factory: Vault Factory 3
+  Pickaxe_Upgrade_1:
+    name: Upgrade to First Pickaxe Factory
+    production_time: 10s
+    type: UPGRADE
+    input:
+      ghasteye:
+        material: SPIDER_EYE
+        amount: 128
+        lore:
+        - Ghast Eye T1
+      cocoon:
+        material: SNOWBALL
+        amount: 128
+        lore:
+        - Cocoon T1
+      blazeember:
+        material: GUNPOWDER
+        amount: 128
+        lore:
+        - Blaze Ember T1
+      creeperblood:
+        material: CARPET
+        durability: 14
+        amount: 128
+        lore:
+        - Creeper Blood T1
+      ribcage:
+        material: BONE_BLOCK
+        amount: 128
+        lore:
+        - Ribcage T1
+      magmaegg:
+        material: MAGMA_BLOCK
+        amount: 128
+        lore:
+        - Magma Egg T1
+      zombietooth:
+        material: FEATHER
+        amount: 128
+        lore:
+        - Zombie's Tooth T1
+    factory: Pickaxe Factory 1
+  Pickaxe_Upgrade_2:
+    name: Upgrade to Second Pickaxe Factory
+    production_time: 10s
+    type: UPGRADE
+    input:
+      ghastfireball:
+        material: FIRE_CHARGE
+        amount: 256
+        lore:
+        - Ghast Fireball T2
+      spiderfang:
+        material: TRIPWIRE_HOOK
+        amount: 256
+        lore:
+        - Spider Fang T2
+      blazefireball:
+        material: BLAZE_POWDER
+        amount: 256
+        lore:
+        - Blaze Fireball T2
+      creeperleg:
+        material: CACTUS
+        amount: 256
+        lore:
+        - Creeper Leg T2
+      femur:
+        material: QUARTZ_BLOCK
+        amount: 256
+        lore:
+        - Femur T2
+      magmaeye:
+        material: RED_MUSHROOM
+        amount: 256
+        lore:
+        - Magma Eye T2
+      zombieleg:
+        material: END_ROD
+        amount: 256
+        lore:
+        - Zombie Leg T2
+    factory: Pickaxe Factory 2
+  Pickaxe_Upgrade_3:
+    name: Upgrade to Third Pickaxe Factory
+    production_time: 10s
+    type: UPGRADE
+    input:
+      ghastheart:
+        material: FIREWORK_CHARGE
+        amount: 512
+        lore:
+        - Ghast Heart T3
+      slimyheart:
+        material: FERMENTED_SPIDER_EYE
+        amount: 512
+        lore:
+        - Slimy Heart T3
+      burntheart:
+        material: COAL
+        amount: 512
+        lore:
+        - Burnt Heart T3
+      sulfurheart:
+        material: STONE
+        amount: 512
+        lore:
+        - Sulfur Heart T3
+      boneheart:
+        material: INK_SACK
+        durability: 15
+        amount: 512
+        lore:
+        - Bone Heart T3
+      magmaheart:
+        material: REDSTONE_TORCH
+        amount: 512
+        lore:
+        - Magma Heart T3
+      rottenheart:
+        material: INK_SACK
+        durability: 3
+        amount: 512
+        lore:
+        - Rotten Heart T3
+    factory: Pickaxe Factory 3
+  Potion_Upgrade:
+    name: Upgrade to Potion Factory
+    production_time: 10s
+    type: UPGRADE
+    input:
+      blazerods:
+        material: BLAZE_ROD
+        amount: 64
+      gunpowder:
+        material: GUNPOWDER
+        amount: 128
+      bone:
+        material: BONE
+        amount: 512
+      magmacream:
+        material: MAGMA_CREAM
+        amount: 128
+      rottenflesh:
+        material: ROTTEN_FLESH
+        amount: 256
+      spidereye:
+        material: SPIDER_EYE
+        amount: 128
+      ghasttear:
+        material: GHAST_TEAR
+        amount: 64
+    factory: Potion Factory
+  Lottery_Upgrade:
+    name: Upgrade to Lottery Factory
+    production_time: 10s
+    type: UPGRADE
+    input:
+      obsidian:
+        material: OBSIDIAN
+        amount: 512
+      diamond:
+        material: DIAMOND
+        amount: 512
+    factory: Lottery Factory
