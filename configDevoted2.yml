@@ -37,7 +37,18 @@ factories:
     type: FCCUPGRADE
     name: Smelter
     recipes:
-    - Craft U4E6 Pickaxe
+    - Smelt Glass
+    - Smelt Stone
+    - Create Sea Lantern
+    - Craft Coal Blocks
+    - Create Netherbrick
+    - Create Quartz Blocks
+    - Create Prismarine Blocks
+    - Freeze Packed Ice
+    - Create Redstone Lamp
+    - Forge Rails
+    - Forge Powered Rails
+    - Create Claims Bastion
     - Accident Repair
   Vault_Factory_1:
     type: FCCUPGRADE
