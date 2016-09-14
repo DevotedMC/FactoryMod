@@ -147,27 +147,187 @@ recipes:
         material: EXP_BOTTLE
         amount: 10
     health_gained: 10000
-  mixConcrete:
+  Smelt_Glass:
     type: PRODUCTION
-    name: Mix Concrete
-    production_time: 10s
+    name: Smelt Glass
+    production_time: 5s
     input:
-      stone:
-        material: STONE
-        durability: -1
-        amount: 64
-      gravel:
-        material: GRAVEL
-        amount: 64
       sand:
         material: SAND
         amount: 64
     output:
-      concrete:
-        material: GRAVEL
+      glass:
+        material: GLASS
+        amount: 192
+  Smelt_Stone:
+    type: PRODUCTION
+    name: Smelt Stone
+    production_time: 5s
+    input:
+      cobble:
+        material: COBBLESTONE
         amount: 64
+    output:
+      stone:
+        material: STONE
+        amount: 192
+  Create_Sea_Lantern:
+    type: PRODUCTION
+    name: Create Sea Lantern
+    production_time: 5s
+    input:
+      lapis:
+        material: INK_SACK
+        durability: 4
+        amount: 16
+      glowstonedust:
+        material: GLOWSTONE_DUST
+        amount: 4
+    output:
+      sealantern:
+        material: SEA_LANTERN
+        amount: 64
+  Craft_Coal_Blocks:
+    type: PRODUCTION
+    name: Craft Coal Blocks
+    production_time: 5s
+    input:
+      coalore:
+        material: COAL_ORE
+        amount: 16
+      stone:
+        material: STONE
+        amount: 64
+      quartz:
+        material: QUARTZ
+        amount: 64
+    output:
+      coalblocks:
+        material: COAL_BLOCK
+        amount: 64
+  Create_Netherbrick:
+    type: PRODUCTION
+    name: Create Netherbrick
+    production_time: 5s
+    input:
+      obsidian:
+        material: OBSIDIAN
+        amount: 32
+      sand:
+        material: SAND
+        amount: 32
+    output:
+      netherbrick:
+        material: NETHER_BRICK
+        amount: 192
+  Create_Quartz_Blocks:
+    type: PRODUCTION
+    name: Create Quartz Blocks
+    production_time: 5s
+    input:
+      snow:
+        material: SNOW_BLOCK
+        amount: 32
+      stone:
+        material: stone
+        amount: 32
+    output:
+      quartzblock:
+        material: QUARTZ_BLOCK
+        amount: 192
+  Create_Prismarine_Blocks:
+    type: PRODUCTION
+    name: Create Prismarine Blocks
+    production_time: 5s
+    input:
+      lapis:
+        material: INK_SACK
+        durability: 4
+        amount: 16
+    output:
+      prismarineblock:
+        material: PRISMARINE
+        amount: 192
+  Create_Packed_Ice:
+    type: PRODUCTION
+    name: Freeze Packed Ice
+    production_time: 5s
+    input:
+      snow:
+        material: SNOW_BLOCK
+        amount: 64
+      waterbucket:
+        material: WATER_BUCKET
+        amount: 4
+    output:
+      packedice:
+        material: PACKED_ICE
+        amount: 192
+      bucket:
+        material: BUCKET
+        amount: 4
+  Create_Redstone_Lamp:
+    type: PRODUCTION
+    name: Create Redstone Lamp
+    production_time: 5s
+    input:
+      redstone:
+        material: REDSTONE
+        amount: 16
+      glowstonedust:
+        material: GLOWSTONE_DUST
+        amount: 4
+    output:
+      redstonelamp:
+        material: REDSTONE_LAMP_OFF
+        amount: 32
+  Forge_Standard_Rails:
+    type: PRODUCTION
+    name: Forge Rails
+    production_time: 5s
+    input:
+      lavabucket:
+        material: LAVA_BUCKET
+        amount: 4
+      stone:
+        material: STONE
+        amount: 256
+    output:
+      rails:
+        material: RAILS
+        amount: 48
+  Forge_Powered_Rails:
+    type: PRODUCTION
+    name: Forge Powered Rails
+    production_time: 5s
+    input:
+      lavabucket:
+        material: LAVA_BUCKET
+        amount: 4
+      stone:
+        material: SANDSTONE
+        amount: 256
+    output:
+      poweredrails:
+        material: POWERED_RAIL
+        amount: 24
+  Create_Claim_Bastion:
+    type: PRODUCTION
+    name: Create Claims Bastion
+    production_time: 5s
+    input:
+      stone:
+        material: STONE
+        amount: 320
+      glass:
+        material: GLASS
+        amount: 320
+    output:
+      sponge:
+        material: SPONGE
+        amount: 1
         lore:
-        - Reinforce then let it set!
+        - Claims Bastion
 
 # Upgrades
 
