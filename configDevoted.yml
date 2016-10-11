@@ -55,6 +55,8 @@ factories:
     - Create Netherbrick
     - Create Quartz Blocks
     - Create Prismarine Blocks
+    - Create Dark Prismarine
+    - Create Prismarine Bricks
     - Freeze Packed Ice
     - Create Redstone Lamp
     - Forge Rails
@@ -435,6 +437,37 @@ recipes:
     output:
       prismarineblock:
         material: PRISMARINE
+        amount: 192
+  Create Dark Prismarine:
+    type: PRODUCTION
+    name: Create Dark Prismarine
+    production_time: 5s
+    input:
+      lapis:
+        material: INK_SACK
+        durability: 4
+        amount: 32
+      ink sack:
+        material: INK_SACK
+        amount: 4
+    output:
+      darkprismarine:
+        material: PRISMARINE
+        durability: 2
+        amount: 192
+  Create Prismarine Bricks:
+    type: PRODUCTION
+    name: Create Prismarine Bricks
+    production_time: 5s
+    input:
+      lapis:
+        material: INK_SACK
+        durability: 4
+        amount: 32
+    output:
+      prismarinebrick:
+        material: PRISMARINE
+        durability: 1
         amount: 192
   Freeze Packed Ice:
     type: PRODUCTION
