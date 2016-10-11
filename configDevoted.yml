@@ -447,6 +447,9 @@ recipes:
         material: INK_SACK
         durability: 4
         amount: 32
+      ink sack:
+        material: INK_SACK
+        amount: 4
     output:
       darkprismarine:
         material: PRISMARINE
@@ -461,9 +464,6 @@ recipes:
         material: INK_SACK
         durability: 4
         amount: 32
-      ink sack:
-        material: INK_SACK
-        amount: 4
     output:
       prismarinebrick:
         material: PRISMARINE
