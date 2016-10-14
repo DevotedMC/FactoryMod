@@ -60,6 +60,7 @@ factories:
     - Forge Rails
     - Forge Powered Rails
     - Create Claims Bastion
+    - Bind Written Book
     - Accident Repair
   Vault_Factory_1:
     type: FCCUPGRADE
@@ -621,6 +622,21 @@ recipes:
         material: STONE
         durability: 3
         amount: 64
+  Bind Written Book:
+    type: PRODUCTION
+    name: Bind Written Book
+    production_time: 5s
+    input:
+      paper:
+        material: PAPER
+        amount: 18
+      ink:
+        material: INK_SACK
+        amount: 1
+    output:
+      stone:
+        material: BOOK_AND_QUILL
+        amount: 3
   Stone Obsidian:
     type: PRODUCTION
     name: Stone Obsidian
