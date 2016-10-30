@@ -1324,7 +1324,7 @@ recipes:
     output:
       Iron_Spike:
         material: IRON_INGOT
-        amount: 2
+        amount: 8
         lore:
         - Iron Reinforced Obsidian Spike
   Diamond Spike:
