@@ -88,6 +88,7 @@ factories:
     - Convert Titanium Block T1
     - Convert Platinum Block T2
     - Convert Carbon Block T3
+    - Convert Charcoal Block
     - Create Claims Bastion
     - Accident Repair
   Printing_Press:
