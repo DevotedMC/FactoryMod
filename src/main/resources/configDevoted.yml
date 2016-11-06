@@ -964,7 +964,7 @@ recipes:
     production_time: 5s
     input:
       bronzeblock:
-        material: HARD_CLAY
+        material: STAINED_CLAY
         name: Bronze Block
         durability: 1
         amount: 1
@@ -984,7 +984,7 @@ recipes:
     production_time: 5s
     input:
       pewterblock:
-        material: HARD_CLAY
+        material: STAINED_CLAY
         name: Pewter Block
         durability: 9
         amount: 1
@@ -1004,7 +1004,7 @@ recipes:
     production_time: 5s
     input:
       fiberglassblock:
-        material: HARD_CLAY
+        material: STAINED_CLAY
         name: Fiberglass Block
         durability: 10
         amount: 1
