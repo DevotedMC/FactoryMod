@@ -993,7 +993,7 @@ recipes:
     output:
       pewter:
         material: INK_SACK
-        durability: 14
+        durability: 8
         amount: 9
         name: Pewter
         lore:
@@ -1017,7 +1017,7 @@ recipes:
     output:
       fiberglass:
         material: INK_SACK
-        durability: 14
+        durability: 5
         amount: 9
         name: Fiberglass
         lore:
