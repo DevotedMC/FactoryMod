@@ -964,9 +964,9 @@ recipes:
     production_time: 5s
     input:
       bronzeblock:
-        material: INK_SACK
+        material: HARD_CLAY
         name: Bronze Block
-        durability: 14
+        durability: 1
         amount: 1
         lore:
         - Bronze Block T1
@@ -984,9 +984,9 @@ recipes:
     production_time: 5s
     input:
       pewterblock:
-        material: INK_SACK
+        material: HARD_CLAY
         name: Pewter Block
-        durability: 14
+        durability: 9
         amount: 1
         lore:
         - Pewter Block T2
@@ -1004,9 +1004,9 @@ recipes:
     production_time: 5s
     input:
       fiberglassblock:
-        material: INK_SACK
+        material: HARD_CLAY
         name: Fiberglass Block
-        durability: 14
+        durability: 10
         amount: 1
         lore:
         - Fiberglass Block T3
