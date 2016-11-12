@@ -3,6 +3,7 @@ package com.github.igotyou.FactoryMod;
 import static vg.civcraft.mc.civmodcore.util.ConfigParsing.parseItemMap;
 import static vg.civcraft.mc.civmodcore.util.ConfigParsing.parseTime;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedList;
@@ -18,8 +19,6 @@ import org.bukkit.enchantments.Enchantment;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.scheduler.BukkitRunnable;
 
-import vg.civcraft.mc.civmodcore.itemHandling.ItemMap;
-
 import com.github.igotyou.FactoryMod.eggs.FurnCraftChestEgg;
 import com.github.igotyou.FactoryMod.eggs.IFactoryEgg;
 import com.github.igotyou.FactoryMod.eggs.PipeEgg;
@@ -32,6 +31,7 @@ import com.github.igotyou.FactoryMod.recipes.DeterministicEnchantingRecipe;
 import com.github.igotyou.FactoryMod.recipes.DummyParsingRecipe;
 import com.github.igotyou.FactoryMod.recipes.FactoryMaterialReturnRecipe;
 import com.github.igotyou.FactoryMod.recipes.IRecipe;
+import com.github.igotyou.FactoryMod.recipes.IncrementalUpgradeRecipe;
 import com.github.igotyou.FactoryMod.recipes.InputRecipe;
 import com.github.igotyou.FactoryMod.recipes.LoreEnchantRecipe;
 import com.github.igotyou.FactoryMod.recipes.PrintBookRecipe;
@@ -49,6 +49,8 @@ import com.github.igotyou.FactoryMod.structures.FurnCraftChestStructure;
 import com.github.igotyou.FactoryMod.structures.PipeStructure;
 import com.github.igotyou.FactoryMod.utility.FactoryGarbageCollector;
 
+import vg.civcraft.mc.civmodcore.itemHandling.ItemMap;
+
 public class ConfigParser {
 	private FactoryMod plugin;
 	private HashMap<String, IRecipe> recipes;
@@ -59,6 +61,8 @@ public class ConfigParser {
 	private double defaultReturnRate;
 	private HashMap<String, IFactoryEgg> upgradeEggs;
 	private HashMap<IFactoryEgg, List<String>> recipeLists;
+	private HashMap<String, List<String>> incrementAddLists;
+	private HashMap<String, List<String>> incrementRemoveLists;
 	private HashMap<RecipeScalingUpgradeRecipe, String []> recipeScalingUpgradeMapping;
 	private String defaultMenuFactory;
 	private long defaultBreakGracePeriod;
@@ -141,9 +145,12 @@ public class ConfigParser {
 				logInventories, factoryRenames);
 		upgradeEggs = new HashMap<String, IFactoryEgg>();
 		recipeLists = new HashMap<IFactoryEgg, List<String>>();
+		incrementAddLists = new HashMap<String, List<String>>();
+		incrementRemoveLists = new HashMap<String, List<String>>();
 		recipeScalingUpgradeMapping = new HashMap<RecipeScalingUpgradeRecipe, String[]>();
 		parseFactories(config.getConfigurationSection("factories"));
 		parseRecipes(config.getConfigurationSection("recipes"));
+		assignRecipesToIncrementalUpgrades();
 		assignRecipeScalingRecipes();
 		assignRecipesToFactories();
 		enableFactoryDecay(config);
@@ -842,6 +849,15 @@ public class ConfigParser {
 			String noteTitle = config.getString("title");
 			result = new PrintNoteRecipe(identifier, name, productionTime, input, printNotePlate, printBookNoteAmount, secureNote, noteTitle);
 			break;
+		case "INCREMENT_UPGRADE":
+			if(config.contains("add")) {
+				incrementAddLists.put(name, config.getStringList("add"));
+			}
+			if(config.contains("remove")) {
+				incrementRemoveLists.put(name, config.getStringList("remove"));
+			}
+			result = new IncrementalUpgradeRecipe(identifier, name, productionTime, input);
+			break;
 		default:
 			plugin.severe("Could not identify type " + config.getString("type")
 					+ " as a valid recipe identifier");
@@ -899,6 +915,55 @@ public class ConfigParser {
 			if (!usedRecipes.contains(reci)) {
 				plugin.warning("The recipe " + reci.getName() + " is specified in the config, but not used in any factory");
 			}
+		}
+	}
+	
+	public void assignRecipesToIncrementalUpgrades() {
+		for(Entry<String, List<String>> entry : incrementAddLists.entrySet()) {
+			IRecipe rec = recipes.get(entry.getKey());
+			if(!(rec instanceof IncrementalUpgradeRecipe)) {
+				plugin.warning("Not an incremental upgrade recipe, not sure what went wrong");
+				continue;
+			}
+			IncrementalUpgradeRecipe iur = (IncrementalUpgradeRecipe)rec;
+			List<IRecipe> recipeList = new LinkedList<IRecipe>();
+			for(String name : entry.getValue()) {
+				IRecipe recipe = recipes.get(name);
+				if(recipe instanceof DummyParsingRecipe) {
+					plugin.warning("You can't add dummy parsing recipes to factories! Maybe you are the dummy here?");
+					continue;
+				}
+				if(recipe != null) {
+					recipeList.add(recipe);
+				} else {
+					plugin.warning("Could not find specified recipe " + name 
+							+ " for factory " + entry.getKey());
+				}
+			}
+			iur.setAddRecipes(recipeList);
+		}
+		for(Entry<String, List<String>> entry : incrementRemoveLists.entrySet()) {
+			IRecipe rec = recipes.get(entry.getKey());
+			if(!(rec instanceof IncrementalUpgradeRecipe)) {
+				plugin.warning("Not an incremental upgrade recipe, not sure what went wrong");
+				continue;
+			}
+			IncrementalUpgradeRecipe iur = (IncrementalUpgradeRecipe)rec;
+			List<IRecipe> recipeList = new LinkedList<IRecipe>();
+			for(String name : entry.getValue()) {
+				IRecipe recipe = recipes.get(name);
+				if(recipe instanceof DummyParsingRecipe) {
+					plugin.warning("You can't add dummy parsing recipes to factories! Maybe you are the dummy here?");
+					continue;
+				}
+				if(recipe != null) {
+					recipeList.add(recipe);
+				} else {
+					plugin.warning("Could not find specified recipe " + name 
+							+ " for factory " + entry.getKey());
+				}
+			}
+			iur.setRemoveRecipes(recipeList);
 		}
 	}
 	
