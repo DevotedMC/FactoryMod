@@ -14,6 +14,7 @@ import org.bukkit.inventory.meta.ItemMeta;
 
 import vg.civcraft.mc.civmodcore.itemHandling.ISUtils;
 import vg.civcraft.mc.civmodcore.itemHandling.ItemMap;
+import vg.civcraft.mc.civmodcore.itemHandling.ItemWrapper;
 
 import com.github.igotyou.FactoryMod.eggs.FurnCraftChestEgg;
 import com.github.igotyou.FactoryMod.eggs.IFactoryEgg;
@@ -32,7 +33,7 @@ public class Upgraderecipe extends InputRecipe {
 	public void applyEffect(Inventory i, FurnCraftChestFactory fccf) {
 		logAfterRecipeRun(i, fccf);
 		if (input.isContainedIn(i)) {
-			if (input.removeSafelyFrom(i)) {
+			if (input.removeSafelyFrom(i) != null) {
 				FurnCraftChestEgg e = (FurnCraftChestEgg) egg;
 				fccf.upgrade(e.getName(),
 						e.getRecipes(), e.getFuel(),
@@ -61,14 +62,14 @@ public class Upgraderecipe extends InputRecipe {
 		LinkedList<ItemStack> result = new LinkedList<ItemStack>();
 		ItemMap inventoryMap = new ItemMap(i);
 		ItemMap possibleRuns = new ItemMap();
-		for (Entry<ItemStack, Integer> entry : input.getEntrySet()) {
+		for (Entry<ItemWrapper, Integer> entry : input.getEntrySet()) {
 			if (inventoryMap.getAmount(entry.getKey()) != 0) {
-				possibleRuns.addItemAmount(
+				possibleRuns.addItemWrapper(
 						entry.getKey(),
 						inventoryMap.getAmount(entry.getKey())
 								/ entry.getValue());
 			} else {
-				possibleRuns.addItemAmount(entry.getKey(), 0);
+				possibleRuns.addItemWrapper(entry.getKey(), 0);
 			}
 		}
 		for (ItemStack is : input.getItemStackRepresentation()) {

@@ -65,7 +65,7 @@ public class CompactingRecipe extends InputRecipe {
 			for (ItemStack is : i.getContents()) {
 				if (is != null) {
 					if (compactable(is, im)) {
-						if (input.removeSafelyFrom(i)) {
+						if (input.removeSafelyFrom(i) != null) {
 							compact(is,i);
 						}
 						break;
@@ -138,7 +138,7 @@ public class CompactingRecipe extends InputRecipe {
 		ItemStack copy = is.clone();
 		copy.setAmount(getCompactStackSize(copy.getType()));
 		ItemMap toRemove = new ItemMap(copy);
-		if (toRemove.removeSafelyFrom(i)) {
+		if (toRemove.removeSafelyFrom(i) != null) {
 			compactStack(copy);
 			i.addItem(copy);
 		}

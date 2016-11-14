@@ -51,7 +51,7 @@ public class PrintingPlateRecipe extends PrintingPressRecipe {
 		ItemMap toRemove = input.clone();
 		ItemMap toAdd = output.clone();
 		
-		if (toRemove.isContainedIn(i) && toRemove.removeSafelyFrom(i)) {
+		if (toRemove.isContainedIn(i) && toRemove.removeSafelyFrom(i) != null) {
 			for(ItemStack is: toAdd.getItemStackRepresentation()) {
 				is = addTags(i, serialNumber, is);
 				

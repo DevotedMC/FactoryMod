@@ -12,6 +12,7 @@ import org.bukkit.inventory.ItemStack;
 
 import vg.civcraft.mc.civmodcore.itemHandling.ISUtils;
 import vg.civcraft.mc.civmodcore.itemHandling.ItemMap;
+import vg.civcraft.mc.civmodcore.itemHandling.ItemWrapper;
 
 import com.github.igotyou.FactoryMod.factories.FurnCraftChestFactory;
 
@@ -37,7 +38,7 @@ public class PylonRecipe extends InputRecipe {
 		if (!actualOutput.fitsIn(i)) {
 			return;
 		}
-		if (input.removeSafelyFrom(i)) {
+		if (input.removeSafelyFrom(i) != null) {
 			for (ItemStack is : actualOutput.getItemStackRepresentation()) {
 				i.addItem(is);
 			}
@@ -116,8 +117,8 @@ public class PylonRecipe extends InputRecipe {
 				/ (float) globalLimit);
 		double multiplier = 1.0 / overload;
 		ItemMap actualOutput = new ItemMap();
-		for (Entry<ItemStack, Integer> entry : output.getEntrySet()) {
-			actualOutput.addItemAmount(entry.getKey(),
+		for (Entry<ItemWrapper, Integer> entry : output.getEntrySet()) {
+			actualOutput.addItemWrapper(entry.getKey(),
 					(int) (entry.getValue() * multiplier));
 		}
 		return actualOutput;

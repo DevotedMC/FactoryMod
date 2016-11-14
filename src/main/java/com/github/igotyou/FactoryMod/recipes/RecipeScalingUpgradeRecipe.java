@@ -35,7 +35,7 @@ public class RecipeScalingUpgradeRecipe extends InputRecipe {
 		}
 		ItemMap toRemove = input.clone();
 		if (toRemove.isContainedIn(i)) {
-			if (toRemove.removeSafelyFrom(i)) {
+			if (toRemove.removeSafelyFrom(i) != null) {
 				if (newRank == 1) {
 					fccf.addRecipe(toUpgrade);
 				}

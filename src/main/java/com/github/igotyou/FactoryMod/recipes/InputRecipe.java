@@ -16,6 +16,7 @@ import com.github.igotyou.FactoryMod.utility.LoggingUtils;
 
 import vg.civcraft.mc.civmodcore.itemHandling.ISUtils;
 import vg.civcraft.mc.civmodcore.itemHandling.ItemMap;
+import vg.civcraft.mc.civmodcore.itemHandling.ItemWrapper;
 
 /**
  * A recipe with any form of item input to run it
@@ -122,11 +123,11 @@ public abstract class InputRecipe implements IRecipe {
 		LinkedList<ItemStack> result = new LinkedList<ItemStack>();
 		ItemMap inventoryMap = new ItemMap(i);
 		ItemMap possibleRuns = new ItemMap();
-		for (Entry<ItemStack, Integer> entry : input.getEntrySet()) {
+		for (Entry<ItemWrapper, Integer> entry : input.getEntrySet()) {
 			if (inventoryMap.getAmount(entry.getKey()) != 0) {
-				possibleRuns.addItemAmount(entry.getKey(), inventoryMap.getAmount(entry.getKey()) / entry.getValue());
+				possibleRuns.addItemWrapper(entry.getKey(), inventoryMap.getAmount(entry.getKey()) / entry.getValue());
 			} else {
-				possibleRuns.addItemAmount(entry.getKey(), 0);
+				possibleRuns.addItemWrapper(entry.getKey(), 0);
 
 			}
 		}

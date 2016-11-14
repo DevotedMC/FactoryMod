@@ -12,6 +12,7 @@ import org.bukkit.inventory.ItemStack;
 
 import vg.civcraft.mc.civmodcore.itemHandling.ISUtils;
 import vg.civcraft.mc.civmodcore.itemHandling.ItemMap;
+import vg.civcraft.mc.civmodcore.itemHandling.ItemWrapper;
 
 import com.github.igotyou.FactoryMod.factories.FurnCraftChestFactory;
 import com.github.igotyou.FactoryMod.recipes.scaling.ProductionRecipeModifier;
@@ -56,8 +57,8 @@ public class ProductionRecipe extends InputRecipe {
 		}
 		ItemMap adjusted = new ItemMap();
 		double factor = modifier.getFactor(rank, runs);
-		for(Entry<ItemStack, Integer> entry : output.getEntrySet()) {
-			adjusted.addItemAmount(entry.getKey(), (int) (Math.floor(entry.getValue() * factor)));
+		for(Entry<ItemWrapper, Integer> entry : output.getEntrySet()) {
+			adjusted.addItemWrapper(entry.getKey(), (int) (Math.floor(entry.getValue() * factor)));
 		}
 		return adjusted;
 	}
@@ -72,11 +73,11 @@ public class ProductionRecipe extends InputRecipe {
 		}
 		ItemMap currentOut = getGuaranteedOutput(fccf.getRecipeLevel(this), fccf.getRunCount(this));
 		List<ItemStack> stacks = currentOut.getItemStackRepresentation();
-		double factor = (modifier != null) ? (modifier.getFactor(fccf.getRecipeLevel(this), fccf.getRunCount(this))) : 1.0;
-		for(Entry<ItemStack, Integer> entry : output.getEntrySet()) {
+		double factor = (modifier != null) ? modifier.getFactor(fccf.getRecipeLevel(this), fccf.getRunCount(this)) : 1.0;
+		for(Entry<ItemWrapper, Integer> entry : output.getEntrySet()) {
 			double additionalChance = (((double) entry.getValue()) * factor) - currentOut.getAmount(entry.getKey());
 			if (Math.abs(additionalChance) > 0.00000001) {
-				ItemStack is = entry.getKey().clone();
+				ItemStack is = entry.getKey().getItem().clone();
 				ISUtils.addLore(is, ChatColor.GOLD + decimalFormatting.format(additionalChance) + " chance for additional item");
 				stacks.add(is);
 			}
@@ -112,15 +113,15 @@ public class ProductionRecipe extends InputRecipe {
 		else {
 			toAdd = getGuaranteedOutput(fccf.getRecipeLevel(this), fccf.getRunCount(this));
 			double factor = modifier.getFactor(fccf.getRecipeLevel(this), fccf.getRunCount(this));
-			for(Entry<ItemStack, Integer> entry : output.getEntrySet()) {
+			for(Entry<ItemWrapper, Integer> entry : output.getEntrySet()) {
 				double additionalChance = (((double) entry.getValue()) * factor) - toAdd.getAmount(entry.getKey());
 				if (rng.nextDouble() <= additionalChance) {
-					toAdd.addItemAmount(entry.getKey(), 1);
+					toAdd.addItemWrapper(entry.getKey(), 1);
 				}
 			}
 		}
 		if (toRemove.isContainedIn(i)) {
-			if (toRemove.removeSafelyFrom(i)) {
+			if (toRemove.removeSafelyFrom(i) != null) {
 				for (ItemStack is : toAdd.getItemStackRepresentation()) {
 					i.addItem(is);
 				}

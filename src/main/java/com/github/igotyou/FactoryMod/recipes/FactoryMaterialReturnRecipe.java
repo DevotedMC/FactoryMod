@@ -21,6 +21,7 @@ import com.github.igotyou.FactoryMod.factories.FurnCraftChestFactory;
 
 import vg.civcraft.mc.civmodcore.itemHandling.ISUtils;
 import vg.civcraft.mc.civmodcore.itemHandling.ItemMap;
+import vg.civcraft.mc.civmodcore.itemHandling.ItemWrapper;
 
 public class FactoryMaterialReturnRecipe extends InputRecipe {
 
@@ -77,12 +78,12 @@ public class FactoryMaterialReturnRecipe extends InputRecipe {
 					public void run() {
 						Location dropLoc = fccf.getMultiBlockStructure()
 								.getCenter();
-						for (Entry<ItemStack, Integer> items : FactoryMod
+						for (Entry<ItemWrapper, Integer> items : FactoryMod
 								.getManager().getTotalSetupCost(fccf)
 								.getEntrySet()) {
 							int returnAmount = (int) (items.getValue() * factor);
 							ItemMap im = new ItemMap();
-							im.addItemAmount(items.getKey(), returnAmount);
+							im.addItemWrapper(items.getKey(), returnAmount);
 							for (ItemStack is : im.getItemStackRepresentation()) {
 								if (is.getDurability() == -1) {
 									is.setDurability((short) 0);

@@ -55,7 +55,7 @@ public class PrintBookRecipe extends PrintingPressRecipe {
 
 		if (printingPlateStack != null
 				&& toRemove.isContainedIn(i)
-				&& toRemove.removeSafelyFrom(i)
+				&& toRemove.removeSafelyFrom(i) != null
 				)
 		{
 			ItemStack book = createBook(printingPlateStack, this.outputAmount);			
@@ -124,9 +124,12 @@ public class PrintBookRecipe extends PrintingPressRecipe {
 	}
 	
 	protected ItemStack getPrintingPlateItemStack(Inventory i, ItemMap printingPlate) {
-		ItemMap items = new ItemMap(i).getStacksByMaterial(printingPlate.getItemStackRepresentation().get(0).getType());
-		
+		ItemMap items = new ItemMap(i);
+		ItemStack printStack = printingPlate.getItemStackRepresentation().get(0);
 		for(ItemStack is : items.getItemStackRepresentation()) {
+			if (printStack.getType() != is.getType()) {
+				continue;
+			}
 			ItemMeta itemMeta = is.getItemMeta();
 			
 			if(itemMeta.getDisplayName().equals(PrintingPlateRecipe.itemName)

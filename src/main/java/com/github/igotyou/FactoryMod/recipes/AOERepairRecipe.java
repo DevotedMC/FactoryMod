@@ -152,7 +152,7 @@ public class AOERepairRecipe extends InputRecipe {
 				Inventory targetInv = ((InventoryHolder) (fac.getChest()
 						.getState())).getInventory();
 				if (remMap.fitsIn(targetInv)) {
-					if (remMap.removeSafelyFrom(i)) {
+					if (remMap.removeSafelyFrom(i) != null) {
 						targetInv.addItem(remStack);
 						for (IRecipe rec : fac.getRecipes()) {
 							if (rec instanceof RepairRecipe) {

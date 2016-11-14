@@ -5,6 +5,7 @@ import java.util.Map.Entry;
 import org.bukkit.inventory.ItemStack;
 
 import vg.civcraft.mc.civmodcore.itemHandling.ItemMap;
+import vg.civcraft.mc.civmodcore.itemHandling.ItemWrapper;
 
 import com.github.igotyou.FactoryMod.FactoryMod;
 import com.github.igotyou.FactoryMod.factories.Factory;
@@ -93,10 +94,10 @@ public class PercentageHealthRepairManager implements IRepairManager {
 		if (rate == 0.0) {
 			return;
 		}
-		for (Entry<ItemStack, Integer> items : FactoryMod.getManager().getTotalSetupCost(factory).getEntrySet()) {
+		for (Entry<ItemWrapper, Integer> items : FactoryMod.getManager().getTotalSetupCost(factory).getEntrySet()) {
 			int returnAmount = (int) (items.getValue() * rate);
 			ItemMap im = new ItemMap();
-			im.addItemAmount(items.getKey(), returnAmount);
+			im.addItemAmount(items.getKey().getItem(), returnAmount);
 			for (ItemStack is : im.getItemStackRepresentation()) {
 				if (is.getDurability() == -1)
 					is.setDurability((short) 0);

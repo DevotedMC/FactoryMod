@@ -169,7 +169,7 @@ public class Pipe extends Factory {
 						LoggingUtils.logInventory(targetInventory,
 								"Target inventory before transfer for "
 										+ getLogData());
-						if (removeMap.removeSafelyFrom(sourceInventory)) {
+						if (removeMap.removeSafelyFrom(sourceInventory) != null) {
 							targetInventory.addItem(removing);
 						}
 						LoggingUtils.logInventory(sourceInventory,

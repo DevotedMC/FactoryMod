@@ -10,7 +10,6 @@ import org.bukkit.inventory.ItemStack;
 import vg.civcraft.mc.civmodcore.itemHandling.ISUtils;
 import vg.civcraft.mc.civmodcore.itemHandling.ItemMap;
 
-import com.github.igotyou.FactoryMod.factories.Factory;
 import com.github.igotyou.FactoryMod.factories.FurnCraftChestFactory;
 import com.github.igotyou.FactoryMod.repairManager.PercentageHealthRepairManager;
 import com.github.igotyou.FactoryMod.utility.LoggingUtils;
@@ -47,7 +46,7 @@ public class RepairRecipe extends InputRecipe {
 	public void applyEffect(Inventory i, FurnCraftChestFactory fccf) {
 		logBeforeRecipeRun(i, fccf);
 		if (enoughMaterialAvailable(i)) {
-			if (input.removeSafelyFrom(i)) {
+			if (input.removeSafelyFrom(i) != null) {
 				((PercentageHealthRepairManager) (fccf.getRepairManager()))
 						.repair(healthPerRun);
 				LoggingUtils.log(((PercentageHealthRepairManager) (fccf

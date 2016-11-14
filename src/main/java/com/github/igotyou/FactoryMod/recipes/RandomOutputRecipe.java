@@ -66,7 +66,7 @@ public class RandomOutputRecipe extends InputRecipe {
 			return;
 		}
 		if (toRemove.isContainedIn(i)) {
-			if (toRemove.removeSafelyFrom(i)) {
+			if (toRemove.removeSafelyFrom(i) != null) {
 				for(ItemStack is: toAdd.getItemStackRepresentation()) {
 					i.addItem(is);
 				}

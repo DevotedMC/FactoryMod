@@ -89,7 +89,7 @@ public class LoreEnchantRecipe extends InputRecipe {
 
 	public void applyEffect(Inventory i, FurnCraftChestFactory fccf) {
 		logBeforeRecipeRun(i, fccf);
-		if (input.removeSafelyFrom(i)) {
+		if (input.removeSafelyFrom(i) != null) {
 			ItemStack toolio = tool.getItemStackRepresentation().get(0);
 			for (ItemStack is : i.getContents()) {
 				if (is != null && toolio.getType() == is.getType() && hasStackRequiredLore(is)) {

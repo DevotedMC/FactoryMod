@@ -55,8 +55,8 @@ public class DecompactingRecipe extends InputRecipe {
 						removeCompactLore(removeClone);
 						toAdd.addItemAmount(removeClone, CompactingRecipe.getCompactStackSize(removeClone.getType()));
 						if (toAdd.fitsIn(i)) { //fits in chest
-							if (input.removeSafelyFrom(i)) { //remove extra input
-								if (toRemove.removeSafelyFrom(i)) { //remove one compacted item
+							if (input.removeSafelyFrom(i) != null) { //remove extra input
+								if (toRemove.removeSafelyFrom(i) != null) { //remove one compacted item
 									for(ItemStack add : toAdd.getItemStackRepresentation()) {
 										i.addItem(add);
 									}
