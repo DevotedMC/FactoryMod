@@ -37,6 +37,7 @@ public class IncrementalUpgradeRecipe extends InputRecipe {
 				for(IRecipe recipe : remove){
 					f.removeRecipe(recipe);
 				}
+				f.removeRecipe(this);
 			}
 		}
 		logAfterRecipeRun(i, f);
