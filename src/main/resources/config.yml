@@ -680,6 +680,20 @@ factories:
 
 #appliedLore is the lore which is applied as replacement for the removed lore. This list may not be empty, but it may contain multiple entries
 
+#10. Incremental Upgrade Recipes
+
+#This type of recipe allows you to add/remove recipes from a factory incrementally. When this recipe is used it is removed automatically
+
+#increment:
+# type: INCREMENT_UPGRADE
+# input:
+#  diamond:
+#    material: DIAMOND
+#    amount: 32
+# add:
+#   - smelt_diamond_ore_2
+# remove:
+#   - smelt_diamond_ore_1
 
 recipes:
 
