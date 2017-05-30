@@ -44,7 +44,6 @@ factories:
     citadelBreakReduction: 1.0
     recipes:
     - Smelt Glass
-    - Smelt Glass Alternative
     - Smelt Stone
     - Craft Granite
     - Craft Andesite
@@ -1177,11 +1176,12 @@ recipes:
     input:
       sand:
         material: SAND
+        durability: -1
         amount: 64
     output:
       glass:
         material: GLASS
-        amount: 192
+        amount: 64
   Smelt Stone:
     type: PRODUCTION
     name: Smelt Stone
@@ -1193,7 +1193,7 @@ recipes:
     output:
       stone:
         material: STONE
-        amount: 192
+        amount: 64
   Create Sea Lantern:
     type: PRODUCTION
     name: Create Sea Lantern
@@ -1375,19 +1375,6 @@ recipes:
     output:
       hardenedclay:
         material: HARD_CLAY
-        amount: 192
-  Smelt Glass Alternative:
-    type: PRODUCTION
-    name: Smelt Glass Alternative
-    production_time: 5s
-    input:
-      redsand:
-        material: SAND
-        durability: 1
-        amount: 64
-    output:
-      glass:
-        material: GLASS
         amount: 192
   Craft Netherrack:
     type: PRODUCTION
