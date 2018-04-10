@@ -219,7 +219,7 @@ public class FurnCraftChestInteractionManager implements IInteractionManager {
 		InputRecipe recipe = (InputRecipe) (rec);
 		ItemStack recStack = recipe.getRecipeRepresentation();
 		int runcount = fccf.getRunCount(recipe);
-		ISUtils.addLore(
+		ISUtils.setLore(
 			recStack,
 			ChatColor.AQUA + "Ran "
 				+ String.valueOf(runcount)
