@@ -6,6 +6,7 @@ import com.github.igotyou.FactoryMod.listeners.FactoryModListener;
 import com.github.igotyou.FactoryMod.utility.FactoryModPermissionManager;
 
 import vg.civcraft.mc.civmodcore.ACivMod;
+import vg.civcraft.mc.namelayer.mc.NameLayerPlugin;
 
 public class FactoryMod extends ACivMod {
 	private FactoryModManager manager;
@@ -20,7 +21,7 @@ public class FactoryMod extends ACivMod {
 		manager = cp.parse();
 		manager.loadFactories();
 		if (manager.isCitadelEnabled()) {
-			permissionManager = new FactoryModPermissionManager();
+			permissionManager = new FactoryModPermissionManager(NameLayerPlugin.getInstance().getGroupTracker().getPermissionTracker());
 		}
 		registerListeners();
 		info("Successfully enabled");

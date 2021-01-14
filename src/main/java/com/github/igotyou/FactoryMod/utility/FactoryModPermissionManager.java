@@ -1,31 +1,33 @@
 package com.github.igotyou.FactoryMod.utility;
 
-import java.util.Arrays;
-import java.util.List;
 
-import vg.civcraft.mc.namelayer.GroupManager.PlayerType;
-import vg.civcraft.mc.namelayer.permission.PermissionType;
+import vg.civcraft.mc.namelayer.core.DefaultPermissionLevel;
+import vg.civcraft.mc.namelayer.core.PermissionTracker;
+import vg.civcraft.mc.namelayer.core.PermissionType;
+import vg.civcraft.mc.namelayer.mc.GroupAPI;
 
 public class FactoryModPermissionManager {
 
-	private PermissionType useFactory;
-	private PermissionType upgradeFactory;
+	public final static String useFactory = "USE_FACTORY";
+	public final static String upgradeFactory = "UPGRADE_FACTORY";
 
-	public FactoryModPermissionManager() {
-		List<PlayerType> memberAndAbove = Arrays.asList(PlayerType.MEMBERS, PlayerType.MODS, PlayerType.ADMINS,
-				PlayerType.OWNER);
-		List<PlayerType> modAndAbove = Arrays.asList(PlayerType.MODS, PlayerType.ADMINS,
-				PlayerType.OWNER);
-		useFactory = PermissionType.registerPermission("USE_FACTORY", memberAndAbove, "Allows a player to use factories reinforced under this group.");
-		upgradeFactory = PermissionType.registerPermission("UPGRADE_FACTORY", modAndAbove, "Allows a player to upgrade/make changes to a factory.");
+	private PermissionTracker permTracker;
+
+	public FactoryModPermissionManager(PermissionTracker permTracker) {
+		this.permTracker = permTracker;
+		setup();
+	}
+	private static void setup() {
+		GroupAPI.registerPermission(useFactory, DefaultPermissionLevel.MEMBER, "Allows a player to use factories reinforced under this group.");
+		GroupAPI.registerPermission(upgradeFactory, DefaultPermissionLevel.MOD, "Allows a player to upgrade/make changes to a factory.");
 	}
 	
 	public PermissionType getUseFactory() {
-		return useFactory;
+		return permTracker.getPermission(useFactory);
 	}
 	
 	public PermissionType getUpgradeFactory() {
-		return upgradeFactory;
+		return permTracker.getPermission(upgradeFactory);
 	}
 
 }

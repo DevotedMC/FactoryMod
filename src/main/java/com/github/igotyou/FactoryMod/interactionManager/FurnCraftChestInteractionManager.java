@@ -29,9 +29,9 @@ import vg.civcraft.mc.civmodcore.api.ItemAPI;
 import vg.civcraft.mc.civmodcore.inventorygui.Clickable;
 import vg.civcraft.mc.civmodcore.inventorygui.ClickableInventory;
 import vg.civcraft.mc.civmodcore.itemHandling.ItemMap;
-import vg.civcraft.mc.namelayer.NameAPI;
-import vg.civcraft.mc.namelayer.group.Group;
-import vg.civcraft.mc.namelayer.permission.PermissionType;
+import vg.civcraft.mc.namelayer.core.Group;
+import vg.civcraft.mc.namelayer.core.PermissionType;
+import vg.civcraft.mc.namelayer.mc.GroupAPI;
 
 public class FurnCraftChestInteractionManager implements IInteractionManager {
 
@@ -91,8 +91,7 @@ public class FurnCraftChestInteractionManager implements IInteractionManager {
 			Reinforcement rein = ReinforcementLogic.getReinforcementProtecting(b);
 			if (rein != null) {
 				Group g = rein.getGroup();
-				if (!NameAPI.getGroupManager().hasAccess(g.getName(), p.getUniqueId(),
-						PermissionType.getPermission("USE_FACTORY"))) {
+				if (!GroupAPI.hasPermission(p, g, FactoryMod.getInstance().getPermissionManager().getUseFactory())) {
 					p.sendMessage(ChatColor.RED + "You dont have permission to interact with this factory");
 					return;
 				}

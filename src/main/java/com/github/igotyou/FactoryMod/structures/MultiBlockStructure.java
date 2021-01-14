@@ -122,12 +122,12 @@ public abstract class MultiBlockStructure {
 		if (rein == null || rein.isInsecure()) {
 			return true;
 		}
-		int prGID = rein.getGroup().getGroupId();
+		int prGID = rein.getGroupId();
 		for (BlockFace face : BlockAPI.ALL_SIDES) {
 			Block rel = here.getRelative(face);
 			if (here.isBlockFacePowered(face)) {
 				Reinforcement relRein = ReinforcementLogic.getReinforcementProtecting(rel);
-				if (relRein == null || relRein.getGroup().getGroupId() != prGID) {
+				if (relRein == null || relRein.getGroupId() != prGID) {
 					return false;
 				}
 			}

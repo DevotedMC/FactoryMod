@@ -38,8 +38,7 @@ import com.github.igotyou.FactoryMod.utility.LoggingUtils;
 import vg.civcraft.mc.citadel.ReinforcementLogic;
 import vg.civcraft.mc.citadel.model.Reinforcement;
 import vg.civcraft.mc.civmodcore.api.ItemNames;
-import vg.civcraft.mc.namelayer.NameAPI;
-import vg.civcraft.mc.namelayer.permission.PermissionType;
+import vg.civcraft.mc.namelayer.mc.GroupAPI;
 
 /**
  * Represents a "classic" factory, which consists of a furnace as powersource, a
@@ -196,8 +195,7 @@ public class FurnCraftChestFactory extends Factory {
 				if (p == null) {
 					return;
 				}
-				if (!NameAPI.getGroupManager().hasAccess(rein.getGroup().getName(), p.getUniqueId(),
-						PermissionType.getPermission("UPGRADE_FACTORY"))) {
+				if (!GroupAPI.hasPermission(p, rein.getGroup(), FactoryMod.getInstance().getPermissionManager().getUpgradeFactory())) {
 					p.sendMessage(ChatColor.RED + "You dont have permission to upgrade this factory");
 					return;
 				}
